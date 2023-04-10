@@ -3,8 +3,9 @@
 
 // If NOT using the `beslogic/json-like` preset with eslint-config-beslogic, use "dprint.json" instead.  
 {
-  // Extended configuration if using beslogic/json-like
+  // https://dprint.dev/config/#extending-a-different-configuration-file
   "extends": "https://raw.githubusercontent.com/Samuel-Therrien-Beslogic/beslogic-dprint-configuration/main/dprint.json",
+  // https://dprint.dev/plugins/typescript/config/
   "typescript": {
     "quoteStyle": "alwaysDouble",
     "quoteProps": "preserve",
