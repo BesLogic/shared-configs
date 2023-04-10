@@ -11,10 +11,7 @@
     "trailingCommas": "never"
   },
   // includes and excludes from extended configurations are ignored
-  "includes": [
-    "**/*.{ts,tsx,js,jsx,cjs,mjs,json,jsonc,json5,dmw,md,toml}",
-    "**/dockerfile"
-  ],
+  "includes": ["**/*.*"],
   "excludes": [
     "**/node_modules",
     "**/*-lock.json",
