@@ -12,7 +12,7 @@
     "trailingCommas": "never"
   },
   // includes and excludes from extended configurations are ignored
-  "includes": ["**/*.*"],
+  "includes": ["**/*"],
   "excludes": [
     "**/node_modules",
     "**/*-lock.json",
