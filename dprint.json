@@ -51,6 +51,9 @@
     "**/cache",
     "**/dist",
     "**/tmp",
-    "**/obj"
+    "**/obj",
+    // capacitor folders
+    "**/*/android/app",
+    "**/*/ios/App"
   ]
 }
