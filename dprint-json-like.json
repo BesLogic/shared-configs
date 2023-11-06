@@ -10,19 +10,5 @@
     "quoteStyle": "alwaysDouble",
     "quoteProps": "preserve",
     "trailingCommas": "never"
-  },
-  // includes and excludes from extended configurations are ignored
-  "excludes": [
-    "**/node_modules",
-    "**/*-lock.json",
-    "**/coverage", // created on install by nx
-    "**/build",
-    "**/cache",
-    "**/dist",
-    "**/tmp",
-    "**/obj",
-    // capacitor folders
-    "**/*/android/app",
-    "**/*/ios/App"
-  ]
+  }
 }
