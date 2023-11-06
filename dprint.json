@@ -45,6 +45,7 @@
   "excludes": [
     "**/node_modules",
     "**/*-lock.json",
+    "**/.yalc",
     "**/coverage", // created on install by nx
     "**/build",
     "**/cache",
