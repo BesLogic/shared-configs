@@ -1,0 +1,39 @@
+# SPDX-License-Identifier: MIT
+# Copyright 2023 Beslogic Inc.
+
+# The source skeleton for this configuration can be found at
+# https://github.com/BesLogic/shared-configs/blob/main/.editorconfig
+# Modifications to this file that are not project-specific should also be done upstream.
+
+# Editor configuration, see https://editorconfig.org
+root = true
+
+[*]
+# https://github.com/editorconfig/editorconfig/wiki/EditorConfig-Properties#widely-supported-by-editors
+indent_style = space
+indent_size = 2
+# tab_width = # defaults indent_size when indent_size is a number
+end_of_line = lf
+charset = utf-8
+trim_trailing_whitespace = true
+insert_final_newline = true
+# https://github.com/editorconfig/editorconfig/wiki/EditorConfig-Properties#supported-by-a-limited-number-of-editors
+max_line_length = 120
+# https://github.com/editorconfig/editorconfig/wiki/EditorConfig-Properties#ideas-for-domain-specific-properties
+quote_type = auto
+# https://marketplace.visualstudio.com/items?itemName=PaulHarrington.EditorGuidelinesPreview#editorconfig-support-vs-2017-and-above
+guidelines = 80, 120
+
+[*.{js,jsx,ts,tsx}]
+quote_type = single
+
+[*.{py,pyi}]
+quote_type = double
+indent_size = 4
+
+[*.md]
+max_line_length = off
+trim_trailing_whitespace = false
+
+[*.csproj]
+indent_size = 4
