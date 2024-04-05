@@ -60,15 +60,15 @@ indent_size = 4
 dotnet_remove_unnecessary_suppression_exclusions = none
 
 # Avoid simple if block w/o brace that could lead to inserting a new statement and breaking code
-csharp_prefer_braces = true:silent
-csharp_preserve_single_line_statements = false
+# csharp_prefer_braces = true:silent
+# csharp_preserve_single_line_statements = false
 csharp_style_allow_embedded_statements_on_same_line_experimental = true:silent
+# TODO: Reconsider later. For now, allow single-line if-guards
+csharp_prefer_braces = when_multiline:silent
+csharp_preserve_single_line_statements = true
 
 # Extra loop safety. TODO: consider "always"
 dotnet_style_prefer_foreach_explicit_cast_in_source = when_strongly_typed
-
-# Don't treat throw as an expression and ensure it stays obvious
-csharp_style_throw_expression = false:suggestion
 
 # Allow { get; set; } on a single line
 csharp_preserve_single_line_blocks = true
@@ -190,13 +190,18 @@ csharp_style_prefer_null_check_over_type_check = true:suggestion
 dotnet_style_coalesce_expression = true:suggestion
 dotnet_style_null_propagation = true:suggestion
 dotnet_style_prefer_conditional_expression_over_assignment = true:silent
-dotnet_style_prefer_conditional_expression_over_return = true:silent
 dotnet_style_prefer_is_null_check_over_reference_equality_method = true:suggestion
 dotnet_style_prefer_simplified_boolean_expressions = true:suggestion
+# ... but don't treat throw as an expression and ensure it stays obvious
+csharp_style_throw_expression = false:suggestion
+dotnet_style_prefer_conditional_expression_over_return = false:silent
 
 # Prefer arrow functions!
 csharp_style_expression_bodied_methods = true:silent
-csharp_style_expression_bodied_constructors = false:silent
+# TODO: Take a decision on this, false vs when_on_single_line
+# csharp_style_expression_bodied_constructors = when_on_single_line:silent
+# For now just disable
+dotnet_diagnostic.IDE0021.severity = none
 csharp_style_expression_bodied_operators = when_on_single_line:silent
 csharp_style_expression_bodied_properties = true:silent
 csharp_style_expression_bodied_indexers = true:silent
