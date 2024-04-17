@@ -8,7 +8,7 @@
 
 # https://docs.astral.sh/ruff/configuration/
 target-version = "py310" # Change this to the oldest supported version by your application
-line-length = 120
+line-length = 100
 preview = true
 # Exclude auto-generated files
 # exclude = [""]

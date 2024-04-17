@@ -1,10 +1,10 @@
 // SPDX-License-Identifier: MIT
 // Copyright 2023 Beslogic Inc.
-
-// If using the `beslogic/json-like` preset with eslint-config-beslogic, use "dprint-json-like.json" instead.  
+//
+// If using the `beslogic/json-like` preset with eslint-config-beslogic, use "dprint-json-like.json" instead.
 {
   // https://dprint.dev/config/#global-configuration
-  "lineWidth": 120,
+  "lineWidth": 100,
   "indentWidth": 2,
   "newLineKind": "auto",
   "useTabs": false,

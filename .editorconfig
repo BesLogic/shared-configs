@@ -24,7 +24,7 @@ insert_final_newline = true
 #### Supported By A Limited Number of Editors ####
 #### https://github.com/editorconfig/editorconfig/wiki/EditorConfig-Properties#supported-by-a-limited-number-of-editors
 
-max_line_length = 120
+max_line_length = 100
 
 #### Ideas for Domain-Specific Properties ####
 #### https://github.com/editorconfig/editorconfig/wiki/EditorConfig-Properties#ideas-for-domain-specific-properties
@@ -33,7 +33,7 @@ quote_type = auto
 
 #### EditorGuidelines ####
 #### https://marketplace.visualstudio.com/items?itemName=PaulHarrington.EditorGuidelinesPreview#editorconfig-support-vs-2017-and-above
-guidelines = 80, 120
+guidelines = 80, 100
 
 #### Language-specific overrides ####
 
