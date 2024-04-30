@@ -35,27 +35,6 @@ max-args = 7
 # At least same as max-complexity
 max-branches = 15
 
-[lint.per-file-ignores]
-"typings/**/*.pyi" = [
-  "F811", # Re-exports false positives
-  # The following can't be controlled for external libraries:
-  "A", # Shadowing builtin names
-  "E741", # ambiguous variable name
-  "F403", # `from . import *` used; unable to detect undefined names
-  "FBT", # flake8-boolean-trap
-  "ICN001", # unconventional-import-alias
-  "N8", # Naming conventions
-  "PLC2701", # Private name import
-  "PLR0904", # Too many public methods
-  "PLR0913", # Argument count
-  "PLR0917", # Too many positional arguments
-  "PLW3201", # misspelled dunder method name
-  "PYI042", # CamelCase TypeAlias
-  # Stubs can sometimes re-export entire modules.
-  # Issues with using a star-imported name will be caught by type-checkers.
-  "F405", # may be undefined, or defined from star imports
-]
-
 [lint]
 select = ["ALL"]
 # https://docs.astral.sh/ruff/rules/
@@ -111,9 +90,30 @@ ignore = [
   ###
   # Specific to this project
   ###
-  # "",
+  # "CPY001", # missing-copyright-notice: Assume license from root OR private project
 
   ### FIXME/TODO: I'd normally set them as temporarily warnings, but no warnings in Ruff yet:
   ### https://github.com/astral-sh/ruff/issues/1256 & https://github.com/astral-sh/ruff/issues/1774):
   # "",
+]
+
+[lint.per-file-ignores]
+"**/typings/**/*.pyi" = [
+  "F811", # Re-exports false positives
+  # The following can't be controlled for external libraries:
+  "A", # Shadowing builtin names
+  "E741", # ambiguous variable name
+  "F403", # `from . import *` used; unable to detect undefined names
+  "FBT", # flake8-boolean-trap
+  "ICN001", # unconventional-import-alias
+  "N8", # Naming conventions
+  "PLC2701", # Private name import
+  "PLR0904", # Too many public methods
+  "PLR0913", # Argument count
+  "PLR0917", # Too many positional arguments
+  "PLW3201", # misspelled dunder method name
+  "PYI042", # CamelCase TypeAlias
+  # Stubs can sometimes re-export entire modules.
+  # Issues with using a star-imported name will be caught by type-checkers.
+  "F405", # may be undefined, or defined from star imports
 ]
