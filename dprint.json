@@ -53,6 +53,7 @@
     "**/tmp",
     "**/obj",
     "**/.storybook/documentation.json",
+    "**/storybook-static",
     // capacitor folders
     "**/*/android/app",
     "**/*/ios/App"
