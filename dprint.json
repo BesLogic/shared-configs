@@ -52,6 +52,7 @@
     "**/dist",
     "**/tmp",
     "**/obj",
+    "**/.storybook",
     // capacitor folders
     "**/*/android/app",
     "**/*/ios/App"
