@@ -52,7 +52,7 @@
     "**/dist",
     "**/tmp",
     "**/obj",
-    "**/.storybook",
+    "**/.storybook/documentation.json",
     // capacitor folders
     "**/*/android/app",
     "**/*/ios/App"
