@@ -35,6 +35,16 @@ max-args = 7
 # At least same as max-complexity
 max-branches = 15
 
+[lint.flake8-tidy-imports.banned-api]
+"cv2.imread".msg = """\
+it doesn't support special characters. \
+Use `cv2.imdecode(np.fromfile(filename, dtype=np.uint8), flags)` instead.
+https://github.com/opencv/opencv/issues/4292#issuecomment-2266019697"""
+"cv2.imwrite".msg = """\
+it doesn't support special characters. \
+Use `cv2.imencode(os.path.splitext(filename)[1], img)[1].tofile(filename)` instead.
+https://github.com/opencv/opencv/issues/4292#issuecomment-2266019697"""
+
 [lint]
 select = ["ALL"]
 # https://docs.astral.sh/ruff/rules/
