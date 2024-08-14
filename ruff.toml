@@ -69,6 +69,8 @@ ignore = [
   "SIM105", # flake8-simplify: use-contextlib-suppress
   # Negative performance impact and more verbose https://github.com/astral-sh/ruff/issues/7871
   "UP038", # non-pep604-isinstance
+  # deprecated and is actually slower for cases relevant to unpacking: https://github.com/astral-sh/ruff/issues/12754
+  "UP027", # unpacked-list-comprehension
   # Checked by type-checker (pyright/mypy)
   "ANN", # flake-annotations
   "PGH003", # blanket-type-ignore
