@@ -24,8 +24,6 @@ split-on-trailing-comma = false
 
 # https://docs.astral.sh/ruff/settings/#mccabe
 [lint.mccabe]
-# Hard limit, arbitrary to 4 bytes
-# max-complexity = 31
 # Arbitrary to 2 bytes, same as SonarLint
 max-complexity = 15
 
