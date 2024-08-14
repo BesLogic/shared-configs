@@ -4,7 +4,7 @@
 # The source skeleton for this configuration can be found at
 # https://github.com/BesLogic/shared-configs/blob/main/ruff.toml
 # Modifications to this file that are not project-specific should also be done upstream.
-# These configs are incompatible with ruff<0.3.7
+# These configs are incompatible with ruff<0.5.7
 
 # https://docs.astral.sh/ruff/configuration/
 target-version = "py310" # Change this to the oldest supported version by your application
@@ -96,6 +96,15 @@ ignore = [
   ###
   "COM812", # missing-trailing-comma
   "ISC001", # single-line-implicit-string-concatenation
+
+  ###
+  # Rules about missing special documentation. Up to you if you wanna enable these, you must also disable D406, D407
+  ###
+  "DOC201", #	docstring-missing-returns
+  "DOC402", #	docstring-missing-yields
+  "DOC501", #	docstring-missing-exception
+  # "D406", # new-line-after-section-name, conflicts with DOC
+  # "D407", # dashed-underline-after-section, conflicts with DOC
 
   ###
   # Specific to this project
