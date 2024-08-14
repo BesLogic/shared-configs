@@ -42,6 +42,7 @@ https://github.com/opencv/opencv/issues/4292#issuecomment-2266019697"""
 it doesn't support special characters. \
 Use `cv2.imencode(os.path.splitext(filename)[1], img)[1].tofile(filename)` instead.
 https://github.com/opencv/opencv/issues/4292#issuecomment-2266019697"""
+"rest_framework.parsers".msg = "Use `djangorestframework_camel_case.parser` instead."
 
 [lint]
 select = ["ALL"]
