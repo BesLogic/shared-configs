@@ -1,0 +1,240 @@
+// SPDX-License-Identifier: MIT
+// Copyright 2024 Beslogic Inc.
+// The source skeleton for this configuration can be found at
+// https://github.com/BesLogic/shared-configs/blob/main/.vscode/extensions.json
+// Modifications to this file that are not project-specific should also be done upstream.
+
+{
+  /*
+  * General
+  */
+  "files.associations": {
+    "*.nswag": "json",
+    "*.json": "jsonc",
+    "package.json": "json"
+  },
+  "files.exclude": {
+    "*.zip": true,
+    "**/build": true,
+    "**/dist/**/*.min.js": true,
+    "**/dist/**/*.map": true,
+    "**/src/react-app-env.d.ts": true
+  },
+  "search.exclude": {
+    "package-lock.json": true,
+    "*.lock": true
+  },
+  "editor.rulers": [
+    80,
+    100
+  ],
+  "[git-commit]": {
+    "editor.rulers": [
+      72
+    ]
+  },
+  "editor.detectIndentation": false,
+  "editor.tabSize": 2,
+  "editor.insertSpaces": true,
+  "files.eol": "\n",
+  "files.insertFinalNewline": true,
+  "files.trimFinalNewlines": true,
+  "files.trimTrailingWhitespace": true,
+  "editor.bracketPairColorization.enabled": true,
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll": "explicit",
+    // "source.*Imports": https://github.com/microsoft/TypeScript/pull/50931#issuecomment-1416288712
+    // Let dedicated imports tool deal with it
+    "source.organizeImports": "never",
+    "source.sortImports": "never",
+    // IDEM, but also it's annoying to remove imports because of commented code while testing
+    "source.removeUnusedImports": "never"
+  },
+
+  // NOTE: due to a bug in VSCode, we have to specify editor.defaultFormatter individually to ensure
+  // it overrides user settings. Please upvote: https://github.com/microsoft/vscode/issues/168411
+
+  /*
+  * Markdown
+  */
+  "[markdown]": {
+    "editor.defaultFormatter": "dprint.dprint"
+  },
+  "[dockerfile]": {
+    "editor.defaultFormatter": "dprint.dprint"
+  },
+
+  /*
+  * JSON
+  */
+  "[json]": {
+    "editor.defaultFormatter": "dprint.dprint"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "dprint.dprint"
+  },
+
+  /*
+  * JS/TS
+  */
+  "[javascript]": {
+    "editor.defaultFormatter": "dprint.dprint"
+  },
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "dprint.dprint"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "dprint.dprint"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "dprint.dprint"
+  },
+  "dprint.path": "node_modules/dprint/dprint",
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "typescript.enablePromptUseWorkspaceTsdk": true,
+  "js/ts.implicitProjectConfig.checkJs": true,
+  "javascript.preferences.quoteStyle": "single",
+  "typescript.preferences.quoteStyle": "single",
+  "javascript.preferences.importModuleSpecifier": "non-relative",
+  "typescript.preferences.importModuleSpecifier": "non-relative",
+  "eslint.validate": [
+    // For Angular: "html",
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact"
+  ],
+  "eslint.workingDirectories": [
+    {
+      "mode": "auto"
+    }
+  ],
+  "eslint.codeActionsOnSave.rules": [
+    // Clearing imports and unused vars because of commented code while testing is annoying
+    "!unused-imports/no-unused-imports",
+    "!autofix/no-debugger",
+    "!autofix/no-unused-vars",
+    "*"
+  ],
+  "eslint.rules.customizations": [
+    {
+      "rule": "*",
+      "severity": "downgrade"
+    }
+  ],
+  "jest.autoRun": "off",
+
+  /*
+  * HTML
+  */
+  // Specify the formatter in case other formatters are also installed (ie: Prettier)
+  "[html]": {
+    "editor.defaultFormatter": "vscode.html-language-features"
+  },
+  "html.format.wrapAttributes": "force-expand-multiline",
+
+  /*
+  * CSS
+  */
+  // TODO: Configure stylelint or dprint-prettier so I can recommend it
+  "[css]": {
+    "editor.defaultFormatter": "vscode.css-language-features"
+  },
+  "[scss]": {
+    "editor.defaultFormatter": "vscode.css-language-features"
+  },
+  "[postcss]": {
+    "editor.defaultFormatter": "vscode.css-language-features"
+  },
+  "[less]": {
+    "editor.defaultFormatter": "vscode.css-language-features"
+  },
+  "less.format.spaceAroundSelectorSeparator": true,
+  "css.format.spaceAroundSelectorSeparator": true,
+  "scss.format.spaceAroundSelectorSeparator": true,
+
+  /*
+  * Python
+  */
+  "[python]": {
+    "editor.defaultFormatter": "charliermarsh.ruff",
+    "editor.tabSize": 4,
+    "editor.rulers": [
+      72, // PEP8-17 docstrings
+      // 79, // PEP8-17 default max
+      // 88, // Black/Ruff default
+      // 99, // PEP8-17 acceptable max
+      100 // Our hard rule
+    ]
+  },
+  "mypy-type-checker.importStrategy": "fromEnvironment",
+  "python.terminal.activateEnvironment": true,
+  // python.analysis is Pylance (pyright) configurations
+  "python.analysis.fixAll": [
+    // Explicitly omiting "source.convertImportFormat", let Ruff handle it
+    // Explicitly omiting "source.unusedImports", can be annoying when commenting code for debugging
+  ],
+  "python.analysis.diagnosticMode": "workspace",
+  "ruff.importStrategy": "fromEnvironment",
+  // Use the Ruff extension instead
+  "isort.check": false,
+  // "python.analysis.importFormat": "relative", // If not using src-based layout
+  // For frontend-backend monorepos
+  // "mypy-type-checker.args": [
+  //   // https://github.com/microsoft/vscode-mypy/issues/37#issuecomment-1602702174
+  //   "--config-file=${workspaceFolder}/backend_project/pyproject.toml"
+  // ],
+
+  /*
+  * TOML
+  */
+  "[toml]": {
+    "editor.defaultFormatter": "tamasfe.even-better-toml"
+  },
+  "evenBetterToml.formatter.alignComments": false,
+  "evenBetterToml.formatter.alignEntries": false,
+  "evenBetterToml.formatter.allowedBlankLines": 1,
+  "evenBetterToml.formatter.arrayAutoCollapse": true,
+  "evenBetterToml.formatter.arrayAutoExpand": true,
+  "evenBetterToml.formatter.arrayTrailingComma": true,
+  "evenBetterToml.formatter.columnWidth": 80,
+  "evenBetterToml.formatter.compactArrays": true,
+  "evenBetterToml.formatter.compactEntries": false,
+  "evenBetterToml.formatter.compactInlineTables": false,
+  "evenBetterToml.formatter.indentEntries": false,
+  "evenBetterToml.formatter.indentTables": false,
+  "evenBetterToml.formatter.inlineTableExpand": false,
+  "evenBetterToml.formatter.reorderArrays": true,
+  "evenBetterToml.formatter.trailingNewline": true,
+  // We like keeping TOML keys in a certain non-alphabetical order that feels more natural
+  "evenBetterToml.formatter.reorderKeys": false,
+
+  /*
+  * YAML
+  */
+  "[yaml]": {
+    "editor.defaultFormatter": "redhat.vscode-yaml"
+  },
+
+  /*
+  * XML
+  */
+  "[xml]": {
+    "editor.defaultFormatter": "redhat.vscode-xml"
+  },
+  "xml.codeLens.enabled": true,
+  "xml.format.maxLineWidth": 100,
+
+  /*
+  * Powershell
+  */
+  "powershell.codeFormatting.pipelineIndentationStyle": "IncreaseIndentationForFirstPipeline",
+  "powershell.codeFormatting.autoCorrectAliases": true,
+  "powershell.codeFormatting.trimWhitespaceAroundPipe": true,
+  "powershell.codeFormatting.useConstantStrings": true,
+  "powershell.codeFormatting.useCorrectCasing": true,
+  "powershell.codeFormatting.whitespaceBetweenParameters": true,
+  // Fixes a "unexpectedly closed" warning popup everytime this console is closed
+  "powershell.integratedConsole.showOnStartup": false
+}
