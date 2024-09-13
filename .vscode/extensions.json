@@ -1,0 +1,100 @@
+// SPDX-License-Identifier: MIT
+// Copyright 2024 Beslogic Inc.
+// The source skeleton for this configuration can be found at
+// https://github.com/BesLogic/shared-configs/blob/main/.vscode/extensions.json
+// Modifications to this file that are not project-specific should also be done upstream.
+
+{
+  // See https://go.microsoft.com/fwlink/?LinkId=827846 to learn about workspace recommendations.
+  // List of extensions which should be recommended for users of this workspace.
+  // Only keep those used by your specific project
+  "recommendations": [
+    // General
+    "eamodio.gitlens",
+    "editorconfig.editorconfig",
+    "pkief.material-icon-theme",
+    // Azure
+    "ms-azure-devops.azure-pipelines",
+    // Bicep
+    "ms-azuretools.vscode-bicep",
+    // GitHub
+    "bierner.github-markdown-preview",
+    "github.vscode-github-actions",
+    // Dotenv
+    "dotenv.dotenv-vscode",
+    // JS/TS/JSON
+    "dbaeumer.vscode-eslint",
+    "dprint.dprint",
+    "meganrogge.template-string-converter",
+    // Jest
+    "firsttris.vscode-jest-runner",
+    // Angular
+    "angular.ng-template",
+    "johnpapa.angular2",
+    "webben.browserslist",
+    // Python/TOML
+    "charliermarsh.ruff",
+    "ms-python.mypy-type-checker",
+    "ms-python.python",
+    "ms-python.vscode-pylance",
+    "tamasfe.even-better-toml",
+    // PHP
+    "bmewburn.vscode-intelephense-client",
+    "xdebug.php-pack",
+    // Markdown
+    "bierner.github-markdown-preview",
+    "davidanson.vscode-markdownlint",
+    "dprint.dprint",
+    // Powershell
+    "ms-vscode.powershell",
+    // XML
+    "redhat.vscode-xml",
+    // YAML
+    "redhat.vscode-yaml"
+    //
+    // Add your project's framework-specific and project-specific extensions under here
+  ],
+  // List of extensions recommended by VS Code that should not be recommended for users of this workspace.
+  // Developpers should uninstall or disable the following extensions for this workspace
+  // https://github.com/microsoft/vscode/issues/40239
+  "unwantedRecommendations": [
+    // Must disable in this workspace //
+    // https://github.com/microsoft/vscode/issues/40239 //
+    //
+    // Use workspace version instead
+    "ms-vscode.vscode-typescript-next",
+    // even-better-toml has format on save
+    "bungcip.better-toml",
+    // VSCode has implemented an optimized version
+    "coenraads.bracket-pair-colorizer",
+    "coenraads.bracket-pair-colorizer-2",
+    "shardulm94.trailing-spaces",
+    // Use the official plugin instead
+    "mikestead.dotenv",
+    // Lots of conflicts
+    "esbenp.prettier-vscode",
+    "rvest.vs-code-prettier-eslint",
+    // Not project-configurable. And the ESLint plugin is sufficient in JS/TS projects
+    "sonarsource.sonarlint-vscode",
+    // Don't use two mypy extensions simultaneously
+    "matangover.mypy",
+    // Obsoleted by Pylance
+    "ms-pyright.pyright",
+    // These are Deprecated
+    "eg2.tslint",
+    "ms-vscode.vscode-typescript-tslint-plugin",
+    "simonsiefke.prettier-vscode",
+    //
+    // Don't recommend to autoinstall //
+    //
+    // Use Ruff instead
+    "ms-python.black-formatter",
+    "ms-python.flake8",
+    "ms-python.isort",
+    "ms-python.pylint",
+    // Not configurable per workspace, tends to conflict with other linters
+    "sonarsource.sonarlint-vscode",
+    // Prefer using VSCode itself as a text editor
+    "vscodevim.vim"
+  ]
+}
