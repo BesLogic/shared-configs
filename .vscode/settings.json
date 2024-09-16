@@ -59,6 +59,7 @@
   * Markdown
   */
   "[markdown]": {
+    "files.trimTrailingWhitespace": false,
     "editor.defaultFormatter": "dprint.dprint"
   },
   "[dockerfile]": {
