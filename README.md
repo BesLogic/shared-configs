@@ -2,12 +2,14 @@
 
 These are the base configurations shared across different Beslogic projects.
 
+We recommend keeping the changes to the minimum needed (for example, avoid re-organizing entire sections) as to minimize the diff the next time you update your configs. It is generally recommended to check back on this page when updating workspace/editor/dev tooling settings.
+
 ## VSCode
 
 Copy the [.vscode folder](/.vscode) into the root of your git project.\
 If using a devcontainer or a code-workspace, copy its content in the appropriate sections instead.
 
-You can trim out configuration for languages your project doesn't use.
+Read the comments carefully, you will likely need to uncomment or modify a thing a two for your project. You can trim out configuration sections and extensions for languages your project doesn't use.
 
 ## EditorConfig
 
