@@ -13,8 +13,6 @@
     "quoteStyle": "preferSingle",
     "quoteProps": "asNeeded",
     "semiColons": "asi",
-    "operatorPosition": "sameLine",
-    "conditionalExpression.operatorPosition": "nextLine",
     "arrowFunction.useParentheses": "preferNone",
     "binaryExpression.linePerExpression": true,
     // Not convinced yet
