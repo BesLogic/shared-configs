@@ -30,6 +30,7 @@
       "*.json",
       "*.jsonc",
       "*.json5",
+      "*.nswag",
       "*.dmw"
     ]
   },
