@@ -17,7 +17,7 @@ Copy the [.editorconfig skeleton file](/.editorconfig) into the root of your git
 
 ## dprint
 
-Add the following into your `dprint.json`:
+Add the following into your `.dprint.jsonc`:
 
 ```jsonc
 {
@@ -30,6 +30,7 @@ This configuration automatically includes known "exclusion" folders. But if you 
 If you'd like to pin your config version, you can use a commit hash, like `https://raw.githubusercontent.com/BesLogic/shared-configs/a0d9a34/dprint.json`.
 
 To run dprint along with ESLint, add the following to your `package.json`:
+
 ```json
 "scripts": {
   "eslint": "eslint ./ --ignore-path .gitignore",
@@ -37,7 +38,9 @@ To run dprint along with ESLint, add the following to your `package.json`:
   "lint:fix": "dprint fmt && npm run eslint -- --fix",
 }
 ```
+
 If your `package.json` isn't at root (like frontend/backend split monorepos), you can do:
+
 ```json
 "scripts": {
   "eslint": "eslint ./ --ignore-path .gitignore",
