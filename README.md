@@ -29,7 +29,7 @@ Add the following into your `.dprint.jsonc`:
 This configuration automatically includes known "exclusion" folders. But if you need to add more, you can copy and expand the `exludes` list in [dprint.json](/dprint.json).\
 If you'd like to pin your config version, you can use a commit hash, like `https://raw.githubusercontent.com/BesLogic/shared-configs/a0d9a34/dprint.json`.
 
-### package.json
+### package.json (for dprint and ESLint)
 
 To run dprint along with ESLint, add the following to your `package.json`:
 
@@ -41,7 +41,7 @@ To run dprint along with ESLint, add the following to your `package.json`:
 }
 ```
 
-If your `package.json` isn't at root (like frontend/backend split monorepos), you can do:
+If your `package.json` isn't at root (like frontend/backend split monorepos), you can do the following to ensure the formatter (dprint) is run on _all_ files:
 
 ```json
 "scripts": {
