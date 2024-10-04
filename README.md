@@ -53,7 +53,7 @@ If your `package.json` isn't at root (like frontend/backend split monorepos), yo
 
 ## TypeScript (tsconfig) and ESLint
 
-See <https://www.npmjs.com/package/eslint-config-beslogic#user-content-parallel-configurations>
+See <https://www.npmjs.com/package/eslint-config-beslogic#base-tsconfigjson>
 
 ## Ruff
 
