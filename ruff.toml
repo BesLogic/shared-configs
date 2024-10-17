@@ -81,6 +81,9 @@ ignore = [
   "D212", # pydocstyle: multi-line-summary-first-line
   # Allow differentiating between broken (FIXME) and to be done/added/completed (TODO)
   "TD001", # flake8-todos: invalid-todo-tag
+  # Typeshed doesn't want complex or non-literal defaults for maintenance and testing reasons.
+  # This doesn't affect us, let's have more complete stubs.
+  "PYI011", # typed-argument-default-in-stub
 
   ###
   # These should be warnings (https://github.com/astral-sh/ruff/issues/1256 & https://github.com/astral-sh/ruff/issues/1774)
