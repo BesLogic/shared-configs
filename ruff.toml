@@ -131,12 +131,18 @@ ignore = [
   "ICN001", # unconventional-import-alias
   "N8", # Naming conventions
   "PLC2701", # Private name import
+  "PLE0302", # The special method expects a given signature
   "PLR0904", # Too many public methods
   "PLR0913", # Argument count
   "PLR0917", # Too many positional arguments
   "PLW3201", # misspelled dunder method name
   "PYI042", # CamelCase TypeAlias
+  "SLOT", # flake8-slots
   # Stubs can sometimes re-export entire modules.
   # Issues with using a star-imported name will be caught by type-checkers.
   "F405", # may be undefined, or defined from star imports
+  # It's normal to be missing annotations for local stubs.
+  # If they were complete, we'd upload them to typeshed!
+  "ANN0",
+  "ANN2",
 ]
