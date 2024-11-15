@@ -38,7 +38,7 @@ To run dprint along with ESLint, add the following to your `package.json`:
 "scripts": {
   "eslint": "eslint ./ --ignore-path .gitignore",
   "lint": "dprint check && npm run eslint",
-  "lint:fix": "dprint fmt && npm run eslint -- --fix",
+  "lint:fix": "npm run eslint -- --fix && dprint fmt",
 }
 ```
 
@@ -48,7 +48,7 @@ If your `package.json` isn't at root (like frontend/backend split monorepos), yo
 "scripts": {
   "eslint": "eslint ./ --ignore-path .gitignore",
   "lint": "cd .. && dprint check && cd frontend && npm run eslint",
-  "lint:fix": "cd .. && dprint fmt && cd frontend && npm run eslint -- --fix",
+  "lint:fix": "npm run eslint -- --fix && cd .. && dprint fmt",
 }
 ```
 
@@ -60,3 +60,76 @@ See <https://www.npmjs.com/package/eslint-config-beslogic#base-tsconfigjson>
 
 Copy the [ruff.toml skeleton file](/ruff.toml) into the root of your python project or root of your monorepo.\
 (this may change if/when Ruff allows sharing external configs: <https://github.com/astral-sh/ruff/discussions/3363#discussioncomment-8911551> / <https://github.com/astral-sh/ruff/issues/12352>)
+
+## PR Autofixes
+
+We've stopped attempting to support pre-commit.ci due to restrictions on downloaded bundle size and runtime downloads on the free tier. As well as having to individually duplicate and pin each ESLint plugin to an exact version.
+
+Instead, we can recommend:
+
+- <https://autofix.ci/> (GitHub App, free for public repos)
+- <https://github.com/marketplace/actions/add-commit> (GitHub Action, needs a custom PAT with `Contents` access to re-trigger workflows, cautious of infinite loops!)
+- <https://github.com/marketplace/actions/git-auto-commit> (IDEM)
+- <https://marketplace.visualstudio.com/items?itemName=Beslogic.apply-git-changes> (Private extension for Azure DevOps, we may publish one day)
+
+<details>
+<summary>GitHub Actions example configuration</summary>
+  
+```yaml
+jobs:
+  Autofixes:
+    runs-on: ubuntu-latest
+    # Only run autofixes on PRs
+    if: ${{ github.event_name == 'pull_request' }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          # Checkout the fork/head-repository and push changes to the fork.
+          # If you skip this, the base repository will be checked out and changes will be committed to the base repository!
+          repository: ${{ github.event.pull_request.head.repo.full_name }}
+          # Checkout the branch made in the fork. Will automatically push changes back to this branch.
+          ref: ${{ github.event.pull_request.head.ref }}
+          # Token with Contents permissions to allow retriggering workflow
+          token: ${{ secrets.PR_AUTOFIX_PAT }}
+
+      - uses: actions/setup-node@v4
+
+      - run: npm ci
+
+      # - uses: other_custom_steps
+
+      - uses: astral-sh/ruff-action@v1
+        # Fix even on other steps failure
+        if: ${{ !cancelled() }}
+        with:
+          args: check --fix
+
+      - uses: astral-sh/ruff-action@v1
+        # Fix even on other steps failure
+        if: ${{ !cancelled() }}
+        with:
+          args: format
+
+      - run: npm run lint:fix
+        # Fix even on other steps failure
+        if: ${{ !cancelled() }}
+
+      # Using https://github.com/marketplace/actions/add-commit
+      - name: Commit autofixes
+        uses: EndBug/add-and-commit@v9
+        # TODO: Prevent infinite loops, github.event.head_commit.author.name is not accessible in this context
+        # if: ${{ github.event.head_commit.author.name != 'github-actions' }}
+        # Push autofixes even on failure
+        if: ${{ !cancelled() }}
+        with:
+          default_author: github_actions
+
+      # OR using https://github.com/marketplace/actions/git-auto-commit
+      - name: Commit autofixes
+        uses: stefanzweifel/git-auto-commit-action@v5
+        # TODO: Prevent infinite loops, github.event.head_commit.author.name is not accessible in this context
+        # if: ${{ github.event.head_commit.author.name != 'github-actions' }}
+        # Push autofixes even on failure
+        if: ${{ !cancelled() }}
+```
+</details>
