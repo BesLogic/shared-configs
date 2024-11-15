@@ -63,7 +63,7 @@ Copy the [ruff.toml skeleton file](/ruff.toml) into the root of your python proj
 
 ## PR Autofixes
 
-We've stopped attempting to support pre-commit.ci due to restrictions on downloaded bundle size and runtime downloads on the free tier. As well as having to individually duplicate and pin each ESLint plugin to an exact version.
+We've stopped attempting to support pre-commit.ci due to restrictions on downloaded bundle size and runtime downloads on the free tier. As well as having to individually duplicate and pin each ESLint plugin to an exact version. And finally, issues typescript-eslint project configuration and going Out Of Memory.
 
 Instead, we can recommend:
 
