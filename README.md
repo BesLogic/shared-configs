@@ -76,6 +76,13 @@ Instead, we can recommend:
 <summary>GitHub Actions example configuration</summary>
   
 ```yaml
+name: PR Autofixes
+
+on:
+  pull_request:
+    branches:
+      - main
+
 jobs:
   Autofixes:
     runs-on: ubuntu-latest
@@ -98,18 +105,19 @@ jobs:
 
       # - uses: other_custom_steps
 
+      # Ruff autofixes
       - uses: astral-sh/ruff-action@v1
         # Fix even on other steps failure
         if: ${{ !cancelled() }}
         with:
           args: check --fix
-
       - uses: astral-sh/ruff-action@v1
         # Fix even on other steps failure
         if: ${{ !cancelled() }}
         with:
           args: format
 
+      # ESLint & Dprint autofixes
       - run: npm run lint:fix
         # Fix even on other steps failure
         if: ${{ !cancelled() }}
