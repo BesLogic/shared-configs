@@ -4,7 +4,7 @@
 # The source skeleton for this configuration can be found at
 # https://github.com/BesLogic/shared-configs/blob/main/ruff.toml
 # Modifications to this file that are not project-specific should also be done upstream.
-# These configs are incompatible with ruff<0.5.7
+# These configs are incompatible with ruff<0.8.0
 
 # https://docs.astral.sh/ruff/configuration/
 target-version = "py310" # Change this to the oldest supported version by your application
@@ -68,12 +68,10 @@ ignore = [
   "SIM105", # flake8-simplify: use-contextlib-suppress
   # Negative performance impact and more verbose https://github.com/astral-sh/ruff/issues/7871
   "UP038", # non-pep604-isinstance
-  # deprecated and is actually slower for cases relevant to unpacking: https://github.com/astral-sh/ruff/issues/12754
-  "UP027", # unpacked-list-comprehension
   # Checked by type-checker (pyright/mypy)
   "ANN", # flake-annotations
   "PGH003", # blanket-type-ignore
-  "TCH", # flake8-type-checking
+  "TC", # flake8-type-checking
   # Already shown by Pylance, checked by pyright, and can be caused by overloads.
   "ARG002", # Unused method argument
   # We want D213: multi-line-summary-second-line and D211: no-blank-line-before-class
@@ -93,7 +91,7 @@ ignore = [
   "TD003", # flake8-todos: missing-todo-link
 
   # False-positives
-  "TCH004", # https://github.com/astral-sh/ruff/issues/3821
+  "TC004", # https://github.com/astral-sh/ruff/issues/3821
 
   ###
   # Conflict with formatter (you can remove this section if you don't use Ruff as a formatter)
