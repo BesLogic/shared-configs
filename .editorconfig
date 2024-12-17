@@ -1,5 +1,5 @@
 # SPDX-License-Identifier: MIT
-# Copyright 2023 Beslogic Inc.
+# Copyright 2024 Beslogic Inc.
 
 # The source skeleton for this configuration can be found at
 # https://github.com/BesLogic/shared-configs/blob/main/.editorconfig
@@ -37,16 +37,16 @@ guidelines = 80, 100
 
 #### Language-specific overrides ####
 
+[*.md]
+max_line_length = off
+trim_trailing_whitespace = false
+
 [*.{js,jsx,ts,tsx}]
 quote_type = single
 
 [*.{py,pyi}]
 quote_type = double
 indent_size = 4
-
-[*.md]
-max_line_length = off
-trim_trailing_whitespace = false
 
 [*.csproj]
 indent_size = 4
