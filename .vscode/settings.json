@@ -112,11 +112,12 @@
     }
   ],
   "eslint.codeActionsOnSave.rules": [
-    // Clearing imports and unused vars because of commented code while testing is annoying
+    // Clearing imports, unused vars and comments because of commented code while testing is annoying
     "!unused-imports/no-unused-imports",
     "!sonarjs/unused-import",
     "!autofix/no-debugger",
     "!autofix/no-unused-vars",
+    "!@eslint-community/eslint-comments/no-unused-disable",
     "*"
   ],
   "eslint.rules.customizations": [
