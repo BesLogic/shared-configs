@@ -38,19 +38,6 @@
     "printWidth": 100,
     "ignoreCommentDirective": "dprint-ignore"
   },
-  "malva": {
-    "printWidth": 100,
-    "hexCase": "upper",
-    "hexColorLength": "long",
-    "operatorLinebreak": "before",
-    "trailingComma": true,
-    "formatComments": true,
-    "linebreakInPseudoParens": true,
-    "declarationOrder": "concentric",
-    "keyframeSelectorNotation": "keyword",
-    "selectorOverrideCommentDirective": "dprint-selector-override",
-    "ignoreCommentDirective": "dprint-ignore"
-  },
   "markup": {
     "printWidth": 100,
     "formatComments": true,
