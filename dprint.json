@@ -57,11 +57,12 @@
     "scriptIndent": true,
     "styleIndent": true,
     // TODO: Ask for a "selfClosing" shorthand
-    "html.normal.selfClosing": true,
-    "html.void.selfClosing": true,
     "component.selfClosing": true,
     "svg.selfClosing": true,
     "mathml.selfClosing": true,
+    // Self-closing tags don,t exist in pure HTML. Let framework-specific linters handle them
+    "html.normal.selfClosing": false,
+    "html.void.selfClosing": false,
     // Shorthand styles unspecified since we don't use Vue, Svelte or Astro
     "strictSvelteAttr": true,
     "ignoreCommentDirective": "dprint-ignore" 
