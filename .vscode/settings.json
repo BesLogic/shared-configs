@@ -136,6 +136,9 @@
     "editor.defaultFormatter": "vscode.html-language-features"
   },
   "html.format.wrapAttributes": "force-expand-multiline",
+  // To match markup_fmt with dprint
+  "html.format.indentInnerHtml": true,
+  "html.format.extraLiners": "",
 
   /*
   * CSS
