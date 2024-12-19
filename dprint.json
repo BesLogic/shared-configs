@@ -56,13 +56,12 @@
     "formatComments": true,
     "scriptIndent": true,
     "styleIndent": true,
-    // Does selfClosing by itself not exists ?
-    "selfClosing": true,
-    // "html.normal.selfClosing": true,
-    // "html.void.selfClosing": true,
-    // "component.selfClosing": true,
-    // "svg.selfClosing": true,
-    // "mathml.selfClosing": true,
+    // TODO: Ask for a "selfClosing" shorthand
+    "html.normal.selfClosing": true,
+    "html.void.selfClosing": true,
+    "component.selfClosing": true,
+    "svg.selfClosing": true,
+    "mathml.selfClosing": true,
     // Shorthand styles unspecified since we don't use Vue, Svelte or Astro
     "strictSvelteAttr": true,
     "ignoreCommentDirective": "dprint-ignore" 
