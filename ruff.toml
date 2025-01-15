@@ -11,7 +11,7 @@ target-version = "py310" # Change this to the oldest supported version by your a
 line-length = 100
 preview = true
 # Exclude auto-generated files
-# exclude = [""]
+extend-exclude = []
 
 # https://docs.astral.sh/ruff/settings/#flake8-implicit-str-concat
 [lint.flake8-implicit-str-concat]
