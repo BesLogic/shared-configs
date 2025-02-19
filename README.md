@@ -30,6 +30,7 @@ This configuration automatically includes known "exclusion" folders. But if you 
 If you'd like to pin your config version, you can use a commit hash, like `https://raw.githubusercontent.com/BesLogic/shared-configs/a0d9a34/dprint.json`.
 
 ### package.json
+
 #### (for dprint and ESLint)
 
 To run dprint along with ESLint, add the following to your `package.json`:
@@ -60,6 +61,13 @@ See <https://www.npmjs.com/package/eslint-config-beslogic#base-tsconfigjson>
 
 Copy the [ruff.toml skeleton file](/ruff.toml) into the root of your python project or root of your monorepo.\
 (this may change if/when Ruff allows sharing external configs: <https://github.com/astral-sh/ruff/discussions/3363#discussioncomment-8911551> / <https://github.com/astral-sh/ruff/issues/12352>)
+
+## mypy
+
+Copy the [mypy.ini](/mypy.ini) into the root of your python project.\
+(this may change if/when mypy allows sharing external configs: <https://github.com/python/mypy/issues/9620>)
+
+You can remove sections that don't concern you (like pyright infered return types or specific plugins). Add any config specific to your project under `Specific to this project`.
 
 ## PR Autofixes
 
@@ -140,4 +148,5 @@ jobs:
         # Push autofixes even on failure
         if: ${{ !cancelled() }}
 ```
+
 </details>
