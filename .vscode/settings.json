@@ -243,5 +243,7 @@
   "powershell.codeFormatting.useCorrectCasing": true,
   "powershell.codeFormatting.whitespaceBetweenParameters": true,
   // Fixes a "unexpectedly closed" warning popup everytime this console is closed
-  "powershell.integratedConsole.showOnStartup": false
+  "powershell.integratedConsole.startInBackground": true,
+  // Only start when openning a ps1 file
+  "powershell.integratedConsole.showOnStartup": false,
 }
