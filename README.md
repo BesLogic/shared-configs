@@ -62,6 +62,8 @@ See <https://www.npmjs.com/package/eslint-config-beslogic#base-tsconfigjson>
 Copy the [ruff.toml skeleton file](/ruff.toml) into the root of your python project or root of your monorepo.\
 (this may change if/when Ruff allows sharing external configs: <https://github.com/astral-sh/ruff/discussions/3363#discussioncomment-8911551> / <https://github.com/astral-sh/ruff/issues/12352>)
 
+Consider adding `--diff` to your `ruff format --check` command.
+
 ## mypy
 
 Copy the [mypy.ini](/mypy.ini) into the root of your python project.\
