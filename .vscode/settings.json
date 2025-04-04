@@ -16,13 +16,12 @@
   "files.exclude": {
     "*.zip": true,
     "**/build": true,
-    "**/dist/**/*.min.js": true,
-    "**/dist/**/*.map": true,
     "**/src/react-app-env.d.ts": true
   },
   "search.exclude": {
     "package-lock.json": true,
-    "*.lock": true
+    "*.lock": true,
+    "dist/": true
   },
   "editor.rulers": [
     80,
