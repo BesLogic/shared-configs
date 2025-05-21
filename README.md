@@ -22,11 +22,11 @@ Add the following into your `.dprint.jsonc`:
 ```jsonc
 {
   // https://dprint.dev/config/#extending-a-different-configuration-file
-  "extends": "https://raw.githubusercontent.com/BesLogic/shared-configs/main/dprint.json"
+  "extends": "https://raw.githubusercontent.com/BesLogic/shared-configs/main/.dprint.jsonc"
 }
 ```
 
-This configuration automatically includes known "exclusion" folders. But if you need to add more, you can copy and expand the `exludes` list in [dprint.json](/dprint.json).\
+This configuration automatically includes known "exclusion" folders. But if you need to add more, you can copy and expand the `exludes` list in [.dprint.jsonc](/.dprint.jsonc).\
 If you'd like to pin your config version, you can use a commit hash, like `https://raw.githubusercontent.com/BesLogic/shared-configs/a0d9a34/dprint.json`.
 
 ### package.json
