@@ -80,6 +80,7 @@
   "excludes": [
     "**/node_modules",
     "**/*-lock.json",
+    "**/*.min.*",
     "**/.yalc",
     "**/coverage", // created on install by nx
     "**/build",
