@@ -84,7 +84,7 @@ Instead, we can recommend:
 
 <details>
 <summary>GitHub Actions example configuration</summary>
-  
+
 ```yaml
 name: PR Autofixes
 

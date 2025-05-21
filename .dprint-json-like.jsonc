@@ -9,6 +9,6 @@
   "typescript": {
     "quoteStyle": "alwaysDouble",
     "quoteProps": "preserve",
-    "trailingCommas": "never"
-  }
+    "trailingCommas": "never",
+  },
 }

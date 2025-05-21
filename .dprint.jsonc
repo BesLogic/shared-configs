@@ -22,7 +22,7 @@
     "importDeclaration.forceSingleLine": true,
     // conflicts with simple-import-sort/imports
     "module.sortImportDeclarations": "maintain",
-    "module.sortExportDeclarations": "maintain"
+    "module.sortExportDeclarations": "maintain",
   },
   // https://dprint.dev/plugins/json/config/
   "json": {
@@ -31,12 +31,12 @@
       "*.jsonc",
       "*.json5",
       "*.nswag",
-      "*.dmw"
-    ]
+      "*.dmw",
+    ],
   },
   "yaml": {
     "printWidth": 100,
-    "ignoreCommentDirective": "dprint-ignore"
+    "ignoreCommentDirective": "dprint-ignore",
   },
   "malva": {
     "printWidth": 100,
@@ -49,7 +49,7 @@
     "declarationOrder": "concentric",
     "keyframeSelectorNotation": "keyword",
     "selectorOverrideCommentDirective": "dprint-selector-override",
-    "ignoreCommentDirective": "dprint-ignore"
+    "ignoreCommentDirective": "dprint-ignore",
   },
   "markup": {
     "printWidth": 100,
@@ -65,7 +65,7 @@
     "html.void.selfClosing": true,
     // Shorthand styles unspecified since we don't use Vue, Svelte or Astro
     "strictSvelteAttr": true,
-    "ignoreCommentDirective": "dprint-ignore"
+    "ignoreCommentDirective": "dprint-ignore",
   },
   "plugins": [
     "https://plugins.dprint.dev/typescript-0.93.0.wasm",
@@ -75,7 +75,7 @@
     "https://plugins.dprint.dev/g-plane/pretty_yaml-v0.5.0.wasm",
     "https://plugins.dprint.dev/dockerfile-0.3.2.wasm",
     "https://plugins.dprint.dev/g-plane/malva-v0.11.1.wasm",
-    "https://plugins.dprint.dev/g-plane/markup_fmt-v0.13.1.wasm"
+    "https://plugins.dprint.dev/g-plane/markup_fmt-v0.13.1.wasm",
   ],
   "excludes": [
     "**/node_modules",
@@ -92,6 +92,6 @@
     "**/storybook-static",
     // capacitor folders
     "**/*/android/app",
-    "**/*/ios/App"
-  ]
+    "**/*/ios/App",
+  ],
 }

@@ -244,5 +244,5 @@
   // Fixes a "unexpectedly closed" warning popup everytime this console is closed
   "powershell.integratedConsole.startInBackground": true,
   // Only start when openning a ps1 file
-  "powershell.integratedConsole.showOnStartup": false,
+  "powershell.integratedConsole.showOnStartup": false
 }
