@@ -33,6 +33,19 @@
       "*.nswag",
       "*.dmw",
     ],
+    // Request to allow globbing: https://github.com/dprint/dprint-plugin-json/issues/38
+    "jsonTrailingCommaFiles": [
+      ".vscode/extensions.json",
+      ".vscode/launch.json",
+      ".vscode/settings.json",
+      ".vscode/tasks.json",
+      "jsconfig.json",
+      "tsconfig.base.json",
+      "tsconfig.editor.json",
+      "tsconfig.json",
+      "tsconfig.lib.json",
+      "tsconfig.spec.json",
+    ],
   },
   "yaml": {
     "printWidth": 100,
