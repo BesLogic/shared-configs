@@ -1,5 +1,6 @@
 // SPDX-License-Identifier: MIT
 // Copyright 2024 Beslogic Inc.
+
 // The source skeleton for this configuration can be found at
 // https://github.com/BesLogic/shared-configs/blob/main/.vscode/settings.json
 // Modifications to this file that are not project-specific should also be done upstream.
@@ -9,15 +10,19 @@
   * General
   */
   "json.schemas": [{
-		"fileMatch": ["*.jsonc"],
-		"schema": {
-			"allowTrailingCommas": true,
-		},
-	}],
+    // Not all .jsonc files have a pre-associated schema
+    "fileMatch": ["*.jsonc"],
+    "schema": {
+      "allowTrailingCommas": true,
+    },
+  }],
   "files.associations": {
     "*.nswag": "json",
     "*.json": "jsonc",
-    "package.json": "json"
+    "package.json": "json",
+    // Qt Creator
+    "*.qrc": "xml",
+    "*.ui": "xml",
   },
   "files.exclude": {
     "*.zip": true,
@@ -41,6 +46,7 @@
   "editor.detectIndentation": false,
   "editor.tabSize": 2,
   "editor.insertSpaces": true,
+  "editor.comments.insertSpace": true,
   "files.eol": "\n",
   "files.insertFinalNewline": true,
   "files.trimFinalNewlines": true,
@@ -61,13 +67,17 @@
   // it overrides user settings. Please upvote: https://github.com/microsoft/vscode/issues/168411
 
   /*
+  * Docker
+  */
+  "[dockerfile]": {
+    "editor.defaultFormatter": "dprint.dprint"
+  },
+
+  /*
   * Markdown
   */
   "[markdown]": {
     "files.trimTrailingWhitespace": false,
-    "editor.defaultFormatter": "dprint.dprint"
-  },
-  "[dockerfile]": {
     "editor.defaultFormatter": "dprint.dprint"
   },
 
@@ -148,22 +158,18 @@
   /*
   * CSS
   */
-  // TODO: Configure stylelint or dprint-prettier so I can recommend it
   "[css]": {
-    "editor.defaultFormatter": "vscode.css-language-features"
+    "editor.defaultFormatter": "dprint.dprint"
   },
   "[scss]": {
-    "editor.defaultFormatter": "vscode.css-language-features"
+    "editor.defaultFormatter": "dprint.dprint"
   },
   "[postcss]": {
-    "editor.defaultFormatter": "vscode.css-language-features"
+    "editor.defaultFormatter": "dprint.dprint"
   },
   "[less]": {
-    "editor.defaultFormatter": "vscode.css-language-features"
+    "editor.defaultFormatter": "dprint.dprint"
   },
-  "less.format.spaceAroundSelectorSeparator": true,
-  "css.format.spaceAroundSelectorSeparator": true,
-  "scss.format.spaceAroundSelectorSeparator": true,
 
   /*
   * Python
@@ -173,10 +179,7 @@
     "editor.tabSize": 4,
     "editor.rulers": [
       72, // PEP8-17 docstrings
-      // 79, // PEP8-17 default max
-      // 88, // Black/Ruff default
-      // 99, // PEP8-17 acceptable max
-      100 // Our hard rule
+      100 // Our formatting limit
     ]
   },
   "mypy-type-checker.importStrategy": "fromEnvironment",
@@ -188,6 +191,9 @@
   ],
   "python.analysis.diagnosticMode": "workspace",
   "ruff.importStrategy": "fromEnvironment",
+  "ruff.enable": true,
+  "ruff.fixAll": true,
+  "ruff.organizeImports": true,
   // Use the Ruff extension instead
   "isort.check": false,
   // "python.analysis.importFormat": "relative", // If not using src-based layout
@@ -225,9 +231,11 @@
   * YAML
   */
   "[yaml]": {
-    "editor.defaultFormatter": "redhat.vscode-yaml"
+    "editor.defaultFormatter": "dprint.dprint"
   },
-  "yaml.format.printWidth": 100,
+  "yaml.schemas": {
+    "https://json.schemastore.org/github-issue-config.json": ".github/ISSUE_TEMPLATE/config.yml"
+  },
 
   /*
   * XML
