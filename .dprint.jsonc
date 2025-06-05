@@ -35,11 +35,15 @@
     ],
     // Request to allow globbing: https://github.com/dprint/dprint-plugin-json/issues/38
     "jsonTrailingCommaFiles": [
+      ".eslintrc.json",
       ".vscode/extensions.json",
       ".vscode/launch.json",
       ".vscode/settings.json",
       ".vscode/tasks.json",
+      "dprint.json",
+      "dprint-json-like.json",
       "jsconfig.json",
+      "pyrightconfig.json",
       "tsconfig.base.json",
       "tsconfig.editor.json",
       "tsconfig.json",
