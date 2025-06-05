@@ -91,7 +91,10 @@ ignore = [
   "FIX", # flake8-fixme
   # Not all TODOs are worth an issue, this would be better as a warning
   "TD003", # flake8-todos: missing-todo-link
-
+  # Python 3.11 introduced "zero cost" exception handling
+  # Good to watch for, but often unfixable
+  "PERF203", # try-except-in-loop,
+  
   # False-positives
   "TC004", # https://github.com/astral-sh/ruff/issues/3821
   # Too many magic number "2" that are preferable inline. https://github.com/astral-sh/ruff/issues/10009
@@ -147,3 +150,5 @@ ignore = [
   "ANN0",
   "ANN2",
 ]
+# Ignore non-autofixable issues with auto-generated DB migrations
+"**/migrations/*.py" = ["E501", "RUF012"]
