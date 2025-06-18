@@ -93,7 +93,7 @@
     "https://plugins.dprint.dev/g-plane/pretty_yaml-v0.5.0.wasm",
     "https://plugins.dprint.dev/dockerfile-0.3.2.wasm",
     "https://plugins.dprint.dev/g-plane/malva-v0.11.1.wasm",
-    "https://plugins.dprint.dev/g-plane/markup_fmt-v0.13.1.wasm",
+    "https://plugins.dprint.dev/g-plane/markup_fmt-v0.21.0.wasm",
   ],
   "excludes": [
     "**/node_modules",
