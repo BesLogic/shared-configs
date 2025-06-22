@@ -50,6 +50,7 @@
       "tsconfig.prod.json",
       "tsconfig.lib.prod.json",
       "tsconfig.spec.json",
+      "typedoc.json",
     ],
   },
   "yaml": {
