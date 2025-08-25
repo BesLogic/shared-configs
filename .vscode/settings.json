@@ -185,6 +185,7 @@
   },
   "mypy-type-checker.importStrategy": "fromEnvironment",
   "python.terminal.activateEnvironment": true,
+  "python.defaultInterpreterPath": "${workspaceFolder}/.vscode/python",
   // python.analysis is Pylance (pyright) configurations
   "python.analysis.fixAll": [
     // Explicitly omiting "source.convertImportFormat", let Ruff handle it
