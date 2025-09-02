@@ -13,8 +13,13 @@
     "eamodio.gitlens",
     "editorconfig.editorconfig",
     "pkief.material-icon-theme",
+    // Docker
+    "docker.docker",
+    // Caddy
+    "matthewpi.caddyfile-support",
     // Azure
     "ms-azure-devops.azure-pipelines",
+    "ni.azdo-wiki-md",
     // Bicep
     "ms-azuretools.vscode-bicep",
     // GitHub
@@ -23,6 +28,7 @@
     // Dotenv
     "dotenv.dotenv-vscode",
     // JS/TS/JSON
+    "webben.browserslist",
     "dbaeumer.vscode-eslint",
     "dprint.dprint",
     "meganrogge.template-string-converter",
