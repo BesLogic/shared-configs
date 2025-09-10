@@ -1,0 +1,38 @@
+// SPDX-License-Identifier: MIT
+// Copyright 2024 Beslogic Inc.
+
+// The source skeleton for this configuration can be found at
+// https://github.com/BesLogic/shared-configs/blob/main/.prettierrc.json5
+// Modifications to this file that are not project-specific should also be done upstream.
+
+// Note that we prefer recommending dprint over Prettier, but if your project *must* use Prettier,
+// here's the configs that most match our recommendations.
+
+{
+  "semi": true,
+  "singleQuote": true,
+  "experimentalOperatorPosition": "start",
+  "overrides": [
+    {
+      "files": "*.y?(a)ml",
+      "options": {
+        "singleQuote": false,
+      },
+    },
+    {
+      // Known json w/o trailing comma support
+      "files": ["*.code-workspace"],
+      "options": {
+        "trailingComma": "none",
+      },
+    },
+    {
+      // Have json5 files look like json as much as possible to avoid needing special syntax highlight in most cases
+      "files": ["*.json5"],
+      "options": {
+        "singleQuote": false,
+        "quoteProps": "preserve",
+      },
+    },
+  ],
+}
