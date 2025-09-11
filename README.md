@@ -6,18 +6,18 @@ We recommend keeping the changes to the minimum needed (for example, avoid re-or
 
 ## VSCode
 
-Copy the [.vscode folder](/.vscode) into the root of your git project.\
+Copy the [.vscode folder](/.vscode) into the root of your project(s) workspace(s).\
 If using a devcontainer or a code-workspace, copy its content in the appropriate sections instead.
 
 Read the comments carefully, you will likely need to uncomment or modify a thing a two for your project. You can trim out configuration sections and extensions for languages your project doesn't use.
 
 ## EditorConfig
 
-Copy the [.editorconfig skeleton file](/.editorconfig) into the root of your git project.
+Copy the [.editorconfig skeleton file](/.editorconfig) into the root of your git project (even if you have multiple workspaces).
 
 ## dprint
 
-Add the following into your `.dprint.jsonc`:
+Add the following into your `.dprint.jsonc` at the root of your git project (even if you have multiple workspaces):
 
 ```jsonc
 {
