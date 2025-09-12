@@ -72,6 +72,14 @@
   // it overrides user settings. Please upvote: https://github.com/microsoft/vscode/issues/168411
 
   /*
+   * C-Sharp
+   */
+  "[csharp]": {
+    // TODO: Consider something like CSharpier for more complete formatting
+    "editor.defaultFormatter": "ms-dotnettools.csharp"
+  },
+  
+  /*
   * Docker
   */
   "[dockerfile]": {
