@@ -1,5 +1,5 @@
 # SPDX-License-Identifier: MIT
-# Copyright 2024 Beslogic Inc.
+# Copyright 2025 Beslogic Inc.
 
 # The source skeleton for this configuration can be found at
 # https://github.com/BesLogic/shared-configs/blob/main/ruff.toml
@@ -95,7 +95,7 @@ ignore = [
   # Python 3.11 introduced "zero cost" exception handling
   # Good to watch for, but often unfixable
   "PERF203", # try-except-in-loop,
-  
+
   # False-positives
   "TC004", # https://github.com/astral-sh/ruff/issues/3821
   # Too many magic number "2" that are preferable inline. https://github.com/astral-sh/ruff/issues/10009
