@@ -78,6 +78,7 @@
     // TODO: Consider something like CSharpier for more complete formatting
     "editor.defaultFormatter": "ms-dotnettools.csharp"
   },
+  "dotnet.formatting.organizeImportsOnFormat": true,
 
   /*
   * Docker
