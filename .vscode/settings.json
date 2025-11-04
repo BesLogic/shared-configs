@@ -67,6 +67,11 @@
     ]
   },
   "git.openRepositoryInParentFolders": "always",
+  // In case the dev never ran `git config blame.ignoreRevsFile .git-blame-ignore-revs`
+  "gitlens.advanced.blame.customArguments": [
+    "--ignore-revs-file",
+    ".git-blame-ignore-revs"
+  ],
 
   // NOTE: due to a bug in VSCode, we have to specify editor.defaultFormatter individually to ensure
   // it overrides user settings. Please upvote: https://github.com/microsoft/vscode/issues/168411
