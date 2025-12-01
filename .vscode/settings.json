@@ -48,6 +48,7 @@
   "files.trimTrailingWhitespace": true,
   "editor.bracketPairColorization.enabled": true,
   "editor.formatOnSave": true,
+  "editor.formatOnSaveMode": "file",
   "editor.codeActionsOnSave": {
     "source.fixAll": "explicit",
     // "source.*Imports": https://github.com/microsoft/TypeScript/pull/50931#issuecomment-1416288712
