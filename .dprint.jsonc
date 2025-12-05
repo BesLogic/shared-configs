@@ -97,16 +97,12 @@
     "https://plugins.dprint.dev/g-plane/markup_fmt-v0.21.0.wasm",
   ],
   "excludes": [
+    // dprint already exlcudes files in .gitignore, no need to add common ones here
+    // https://dprint.dev/config/#un-excluding-gitignored-files
     "**/node_modules",
     "**/*-lock.json",
     "**/*.min.*",
-    "**/.yalc",
     "**/coverage", // created on install by nx
-    "**/build",
-    "**/cache",
-    "**/dist",
-    "**/tmp",
-    "**/obj",
     "**/.storybook/documentation.json",
     "**/storybook-static",
     // capacitor folders
