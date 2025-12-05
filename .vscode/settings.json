@@ -126,7 +126,6 @@
   "[typescriptreact]": {
     "editor.defaultFormatter": "dprint.dprint"
   },
-  "dprint.path": "node_modules/dprint/dprint",
   "typescript.tsdk": "node_modules/typescript/lib",
   "typescript.enablePromptUseWorkspaceTsdk": true,
   "typescript.preferences.preferTypeOnlyAutoImports": true,
