@@ -190,6 +190,9 @@
   "[less]": {
     "editor.defaultFormatter": "dprint.dprint"
   },
+  "less.format.spaceAroundSelectorSeparator": true,
+  "css.format.spaceAroundSelectorSeparator": true,
+  "scss.format.spaceAroundSelectorSeparator": true,
 
   /*
   * Python
