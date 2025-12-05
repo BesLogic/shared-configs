@@ -10,6 +10,7 @@
   // Only keep those used by your specific project
   "recommendations": [
     // General
+    "dprint.dprint",
     "eamodio.gitlens",
     "editorconfig.editorconfig",
     "pkief.material-icon-theme",
@@ -30,7 +31,6 @@
     // JS/TS/JSON
     "webben.browserslist",
     "dbaeumer.vscode-eslint",
-    "dprint.dprint",
     "meganrogge.template-string-converter",
     // Jest
     "firsttris.vscode-jest-runner",
@@ -50,7 +50,6 @@
     // Markdown
     "bierner.github-markdown-preview",
     "davidanson.vscode-markdownlint",
-    "dprint.dprint",
     // Powershell
     "ms-vscode.powershell",
     // XML
