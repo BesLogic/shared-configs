@@ -15,12 +15,16 @@
     "semiColons": "asi",
     "arrowFunction.useParentheses": "preferNone",
     "binaryExpression.linePerExpression": true,
-    // Not convinced yet
-    // "memberExpression.linePerExpression": true,
     "typeLiteral.separatorKind": "comma",
     "enumDeclaration.memberSpacing": "newLine",
     "importDeclaration.forceSingleLine": true,
-    // conflicts with simple-import-sort/imports
+    // Prevent unecessary wrapping on function propos
+    "jsx.multiLineParens": "never",
+
+    // Not convinced yet
+    // "memberExpression.linePerExpression": true,
+
+    // conflict with simple-import-sort/imports
     "module.sortImportDeclarations": "maintain",
     "module.sortExportDeclarations": "maintain",
   },
