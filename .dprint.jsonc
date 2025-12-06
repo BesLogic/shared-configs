@@ -18,7 +18,9 @@
     "typeLiteral.separatorKind": "comma",
     "enumDeclaration.memberSpacing": "newLine",
     "importDeclaration.forceSingleLine": true,
-    // Prevent unecessary wrapping on function propos
+    // Prevent unecessary wrapping on arrow-function assigned to props
+    // Also prevents adding parens inside ternaries and increasing indent
+    // https://github.com/dprint/dprint-plugin-typescript/issues/760
     "jsx.multiLineParens": "never",
 
     // Not convinced yet
