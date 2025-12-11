@@ -67,6 +67,9 @@
       72
     ]
   },
+  "[diff]": {
+    "files.trimTrailingWhitespace": false,
+  },
   "git.openRepositoryInParentFolders": "always",
   // In case the dev never ran `git config blame.ignoreRevsFile .git-blame-ignore-revs`
   "gitlens.advanced.blame.customArguments": [
