@@ -37,7 +37,7 @@ guidelines = 80, 100
 
 #### Language-specific overrides ####
 
-[*.md]
+[*.{md,patch,diff}]
 max_line_length = off
 trim_trailing_whitespace = false
 
