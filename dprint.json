@@ -1,7 +1,0 @@
-// SPDX-License-Identifier: MIT
-// Copyright 2023 Beslogic Inc.
-
-// ⚠️ This is kept for backwards compatibility only. Use .dprint.jsonc instead ⚠️
-{
-  "extends": "https://raw.githubusercontent.com/Samuel-Therrien-Beslogic/beslogic-dprint-configuration/main/.dprint.jsonc"
-}
