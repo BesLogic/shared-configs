@@ -48,6 +48,9 @@
     // PHP
     "bmewburn.vscode-intelephense-client",
     "xdebug.php-pack",
+    // C#
+    "ms-dotnettools.csharp",
+    // "ms-dotnettools.csdevkit",
     // Markdown
     "bierner.github-markdown-preview",
     "davidanson.vscode-markdownlint",
