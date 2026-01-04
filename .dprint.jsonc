@@ -22,9 +22,17 @@
     // Also prevents adding parens inside ternaries and increasing indent
     // https://github.com/dprint/dprint-plugin-typescript/issues/760
     "jsx.multiLineParens": "never",
+    // One of the rare case where unconditional unwraping is what we want
+    "jsxAttributes.preferSingleLine": true,
 
     // Not convinced yet
     // "memberExpression.linePerExpression": true,
+
+    // Still not 100% sure if I want this at "prefer" or "never"
+    // For now never seems to still leave in extra parentheses?
+    // allowing more compact conditional JSX whilst still reducing changes from prettier
+    // https://github.com/dprint/dprint-plugin-typescript/issues/760
+    "jsx.multiLineParens": "never",
 
     // conflict with simple-import-sort/imports
     "module.sortImportDeclarations": "maintain",
@@ -65,7 +73,6 @@
   },
   "malva": {
     "printWidth": 100,
-    "hexCase": "upper",
     "hexColorLength": "long",
     "operatorLinebreak": "before",
     "trailingComma": true,
@@ -75,6 +82,8 @@
     "keyframeSelectorNotation": "keyword",
     "selectorOverrideCommentDirective": "dprint-selector-override",
     "ignoreCommentDirective": "dprint-ignore",
+    // Lowercase in hex is arguably more readable/accessible, even if it doesn't "feel" as clean
+    "hexCase": "lower",
   },
   "markup": {
     "printWidth": 100,
