@@ -169,14 +169,15 @@
   /*
   * HTML
   */
-  // Specify the formatter in case other formatters are also installed (ie: Prettier)
   "[html]": {
-    "editor.defaultFormatter": "vscode.html-language-features"
+    "editor.defaultFormatter": "dprint.dprint"
+    // prettier and dprint's markup_fmt are likely to fail on Django Templates
+    // "editor.defaultFormatter": "vscode.html-language-features"
   },
   "html.format.wrapAttributes": "force-expand-multiline",
   // To match markup_fmt with dprint
-  "html.format.indentInnerHtml": true,
-  "html.format.extraLiners": "",
+  // "html.format.indentInnerHtml": true,
+  // "html.format.extraLiners": "",
 
   /*
   * CSS
@@ -193,9 +194,6 @@
   "[less]": {
     "editor.defaultFormatter": "dprint.dprint"
   },
-  "less.format.spaceAroundSelectorSeparator": true,
-  "css.format.spaceAroundSelectorSeparator": true,
-  "scss.format.spaceAroundSelectorSeparator": true,
 
   /*
   * Python
