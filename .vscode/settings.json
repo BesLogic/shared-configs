@@ -9,13 +9,6 @@
   /*
   * General
   */
-  "json.schemas": [{
-    // Not all .jsonc files have a pre-associated schema
-    "fileMatch": ["*.jsonc"],
-    "schema": {
-      "allowTrailingCommas": true,
-    },
-  }],
   "files.associations": {
     "*.nswag": "json",
     "*.json": "jsonc",
@@ -113,6 +106,13 @@
   "[jsonc]": {
     "editor.defaultFormatter": "dprint.dprint"
   },
+  "json.schemas": [{
+    // Not all .jsonc files have a pre-associated schema
+    "fileMatch": ["*.jsonc"],
+    "schema": {
+      "allowTrailingCommas": true,
+    },
+  }],
 
   /*
   * JS/TS
