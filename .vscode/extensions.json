@@ -59,7 +59,7 @@
     // XML
     "redhat.vscode-xml",
     // YAML
-    "redhat.vscode-yaml"
+    "redhat.vscode-yaml",
     //
     // Add your project's framework-specific and project-specific extensions under here
   ],
@@ -104,6 +104,6 @@
     // Not configurable per workspace, tends to conflict with other linters
     "sonarsource.sonarlint-vscode",
     // Prefer using VSCode itself as a text editor
-    "vscodevim.vim"
-  ]
+    "vscodevim.vim",
+  ],
 }

@@ -55,6 +55,7 @@
       ".vscode/tasks.json",
       "dprint.json",
       "dprint-json-like.json",
+      ".prettierrc.json5",
       "jsconfig.json",
       "pyrightconfig.json",
       "tsconfig.base.json",
@@ -112,7 +113,7 @@
     "https://plugins.dprint.dev/toml-0.6.3.wasm",
     "https://plugins.dprint.dev/g-plane/pretty_yaml-v0.5.0.wasm",
     "https://plugins.dprint.dev/dockerfile-0.3.3.wasm",
-    "https://plugins.dprint.dev/g-plane/malva-v0.11.1.wasm",
+    "https://plugins.dprint.dev/g-plane/malva-v0.15.2.wasm",
     "https://plugins.dprint.dev/g-plane/markup_fmt-v0.21.0.wasm",
   ],
   "excludes": [

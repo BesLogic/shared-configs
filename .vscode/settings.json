@@ -20,16 +20,16 @@
   "files.exclude": {
     "*.zip": true,
     "**/build": true,
-    "**/src/react-app-env.d.ts": true
+    "**/src/react-app-env.d.ts": true,
   },
   "search.exclude": {
     "package-lock.json": true,
     "*.lock": true,
-    "dist/": true
+    "dist/": true,
   },
   "editor.rulers": [
     80,
-    100
+    100,
   ],
   "editor.detectIndentation": false,
   "editor.tabSize": 2,
@@ -49,7 +49,7 @@
     "source.organizeImports": "never",
     "source.sortImports": "never",
     // IDEM, but also it's annoying to remove imports because of commented code while testing
-    "source.removeUnusedImports": "never"
+    "source.removeUnusedImports": "never",
   },
 
   /*
@@ -57,8 +57,8 @@
   */
   "[git-commit]": {
     "editor.rulers": [
-      72
-    ]
+      72,
+    ],
   },
   "[diff]": {
     "files.trimTrailingWhitespace": false,
@@ -67,7 +67,7 @@
   // In case the dev never ran `git config blame.ignoreRevsFile .git-blame-ignore-revs`
   "gitlens.advanced.blame.customArguments": [
     "--ignore-revs-file",
-    ".git-blame-ignore-revs"
+    ".git-blame-ignore-revs",
   ],
 
   // NOTE: due to a bug in VSCode, we have to specify editor.defaultFormatter individually to ensure
@@ -78,7 +78,7 @@
    */
   "[csharp]": {
     // TODO: Consider something like CSharpier for more complete formatting
-    "editor.defaultFormatter": "ms-dotnettools.csharp"
+    "editor.defaultFormatter": "ms-dotnettools.csharp",
   },
   "dotnet.formatting.organizeImportsOnFormat": true,
 
@@ -86,7 +86,7 @@
   * Docker
   */
   "[dockerfile]": {
-    "editor.defaultFormatter": "dprint.dprint"
+    "editor.defaultFormatter": "dprint.dprint",
   },
 
   /*
@@ -94,17 +94,17 @@
   */
   "[markdown]": {
     "files.trimTrailingWhitespace": false,
-    "editor.defaultFormatter": "dprint.dprint"
+    "editor.defaultFormatter": "dprint.dprint",
   },
 
   /*
   * JSON
   */
   "[json]": {
-    "editor.defaultFormatter": "dprint.dprint"
+    "editor.defaultFormatter": "dprint.dprint",
   },
   "[jsonc]": {
-    "editor.defaultFormatter": "dprint.dprint"
+    "editor.defaultFormatter": "dprint.dprint",
   },
   "json.schemas": [{
     // Not all .jsonc files have a pre-associated schema
@@ -118,16 +118,16 @@
   * JS/TS
   */
   "[javascript]": {
-    "editor.defaultFormatter": "dprint.dprint"
+    "editor.defaultFormatter": "dprint.dprint",
   },
   "[javascriptreact]": {
-    "editor.defaultFormatter": "dprint.dprint"
+    "editor.defaultFormatter": "dprint.dprint",
   },
   "[typescript]": {
-    "editor.defaultFormatter": "dprint.dprint"
+    "editor.defaultFormatter": "dprint.dprint",
   },
   "[typescriptreact]": {
-    "editor.defaultFormatter": "dprint.dprint"
+    "editor.defaultFormatter": "dprint.dprint",
   },
   "typescript.tsdk": "node_modules/typescript/lib",
   "typescript.enablePromptUseWorkspaceTsdk": true,
@@ -142,12 +142,12 @@
     "javascript",
     "javascriptreact",
     "typescript",
-    "typescriptreact"
+    "typescriptreact",
   ],
   "eslint.workingDirectories": [
     {
-      "mode": "auto"
-    }
+      "mode": "auto",
+    },
   ],
   "eslint.codeActionsOnSave.rules": [
     // Clearing imports, unused vars and comments because of commented code while testing is annoying
@@ -156,13 +156,13 @@
     "!autofix/no-debugger",
     "!autofix/no-unused-vars",
     "!@eslint-community/eslint-comments/no-unused-disable",
-    "*"
+    "*",
   ],
   "eslint.rules.customizations": [
     {
       "rule": "*",
-      "severity": "downgrade"
-    }
+      "severity": "downgrade",
+    },
   ],
   "jest.autoRun": "off",
 
@@ -170,7 +170,7 @@
   * HTML
   */
   "[html]": {
-    "editor.defaultFormatter": "dprint.dprint"
+    "editor.defaultFormatter": "dprint.dprint",
     // prettier and dprint's markup_fmt are likely to fail on Django Templates
     // "editor.defaultFormatter": "vscode.html-language-features"
   },
@@ -183,16 +183,16 @@
   * CSS
   */
   "[css]": {
-    "editor.defaultFormatter": "dprint.dprint"
+    "editor.defaultFormatter": "dprint.dprint",
   },
   "[scss]": {
-    "editor.defaultFormatter": "dprint.dprint"
+    "editor.defaultFormatter": "dprint.dprint",
   },
   "[postcss]": {
-    "editor.defaultFormatter": "dprint.dprint"
+    "editor.defaultFormatter": "dprint.dprint",
   },
   "[less]": {
-    "editor.defaultFormatter": "dprint.dprint"
+    "editor.defaultFormatter": "dprint.dprint",
   },
 
   /*
@@ -203,8 +203,8 @@
     "editor.tabSize": 4,
     "editor.rulers": [
       72, // PEP8-17 docstrings
-      100 // Our formatting limit
-    ]
+      100, // Our formatting limit
+    ],
   },
   "mypy-type-checker.importStrategy": "fromEnvironment",
   "python.terminal.activateEnvironment": true,
@@ -232,7 +232,7 @@
   * TOML
   */
   "[toml]": {
-    "editor.defaultFormatter": "tamasfe.even-better-toml"
+    "editor.defaultFormatter": "tamasfe.even-better-toml",
   },
   "evenBetterToml.formatter.alignComments": false,
   "evenBetterToml.formatter.alignEntries": false,
@@ -265,14 +265,14 @@
     "editor.defaultFormatter": "dprint.dprint",
   },
   "yaml.schemas": {
-    "https://json.schemastore.org/github-issue-config.json": ".github/ISSUE_TEMPLATE/config.yml"
+    "https://json.schemastore.org/github-issue-config.json": ".github/ISSUE_TEMPLATE/config.yml",
   },
 
   /*
   * XML
   */
   "[xml]": {
-    "editor.defaultFormatter": "dprint.dprint"
+    "editor.defaultFormatter": "dprint.dprint",
   },
   "xml.codeLens.enabled": true,
 
@@ -288,5 +288,5 @@
   // Fixes a "unexpectedly closed" warning popup everytime this console is closed
   "powershell.integratedConsole.startInBackground": true,
   // Only start when openning a ps1 file
-  "powershell.integratedConsole.showOnStartup": false
+  "powershell.integratedConsole.showOnStartup": false,
 }
