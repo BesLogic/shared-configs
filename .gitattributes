@@ -1,0 +1,6 @@
+# Normalize EOF using Git
+* text=auto eol=lf
+
+# Set linguist-language to support comments syntax highlight in GitHub
+*.json  linguist-language=jsonc
+package.json  linguist-language=jsonc
