@@ -25,14 +25,14 @@
     // One of the rare case where unconditional unwraping is what we want
     "jsxAttributes.preferSingleLine": true,
 
+    // We were already wrapping single params in parens, and this is an upcoming global style guide change
+    // TODO: sync with eslint-config-beslogic
+    // "arrowFunction.useParentheses": "force",
+    // TODO: Consider this ! At least for string concatenation (test in DRL)
+    // "binaryExpression.linePerExpression": true,
+
     // Not convinced yet
     // "memberExpression.linePerExpression": true,
-
-    // Still not 100% sure if I want this at "prefer" or "never"
-    // For now never seems to still leave in extra parentheses?
-    // allowing more compact conditional JSX whilst still reducing changes from prettier
-    // https://github.com/dprint/dprint-plugin-typescript/issues/760
-    "jsx.multiLineParens": "never",
 
     // conflict with simple-import-sort/imports
     "module.sortImportDeclarations": "maintain",
@@ -46,6 +46,7 @@
       "*.json5",
       "*.nswag",
       "*.dmw",
+      // Not including Power BI files as we're not expecting manual edits in those
     ],
     // Request to allow globbing: https://github.com/dprint/dprint-plugin-json/issues/38
     "jsonTrailingCommaFiles": [
@@ -87,6 +88,7 @@
     "keyframeSelectorNotation": "keyword",
     "selectorOverrideCommentDirective": "dprint-selector-override",
     "ignoreCommentDirective": "dprint-ignore",
+    "ignoreFileCommentDirective": "dprint-ignore-file",
     // Lowercase in hex is arguably more readable/accessible, even if it doesn't "feel" as clean
     "hexCase": "lower",
   },

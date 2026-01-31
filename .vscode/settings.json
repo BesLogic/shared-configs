@@ -87,6 +87,10 @@
   */
   "[dockerfile]": {
     "editor.defaultFormatter": "dprint.dprint",
+    // dprint doesn't work with COPY JSON array syntax
+    // https://github.com/dprint/dprint-plugin-dockerfile/issues/7
+    // https://github.com/HewlettPackard/dockerfile-parser-rs/issues/42
+    // "editor.defaultFormatter": "docker.docker",
   },
 
   /*
