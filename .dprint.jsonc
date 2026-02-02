@@ -93,6 +93,10 @@
     "hexCase": "lower",
   },
   "markup": {
+    "associations": [
+      "*.csproj",
+      "Directory.Build.props",
+    ],
     "printWidth": 100,
     "formatComments": true,
     "scriptIndent": true,
