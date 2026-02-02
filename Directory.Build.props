@@ -1,0 +1,26 @@
+<Project>
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <LangVersion>latest</LangVersion>
+
+    <!--
+      Create lock files. Allows faster restores and reproducibility
+      without having to pin to exact versions in csproj PackageReference.
+    -->
+    <RestorePackagesWithLockFile>true</RestorePackagesWithLockFile>
+    <!-- Ensure we don't accidentally update or bypass the lock files (missing `locked-mode`) -->
+    <!-- lock files can still be regenerated with: dotnet restore -p:RestoreLockedMode=false -->
+    <RestoreLockedMode>true</RestoreLockedMode>
+
+    <!-- NuGet Security Audit https://learn.microsoft.com/en-us/nuget/concepts/auditing-packages -->
+    <NuGetAudit>true</NuGetAudit>
+    <NuGetAuditLevel>moderate</NuGetAuditLevel>
+    <!--
+      Only fail on high + critical: https://learn.microsoft.com/en-us/nuget/concepts/auditing-packages#warning-codes
+      Alternatively this can be made to only fail on CI: https://learn.microsoft.com/en-us/nuget/concepts/auditing-packages#running-nuget-audit-in-ci
+    -->
+    <WarningsAsErrors>$(WarningsAsErrors);NU1903;NU1904</WarningsAsErrors>
+    <!-- Will be default in .NET 10 -->
+    <NuGetAuditMode>all</NuGetAuditMode>
+  </PropertyGroup>
+</Project>
