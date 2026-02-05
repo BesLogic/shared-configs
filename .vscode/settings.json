@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: MIT
-// Copyright 2025 Beslogic Inc.
+// Copyright 2026 Beslogic Inc.
 
 // The source skeleton for this configuration can be found at
 // https://github.com/BesLogic/shared-configs/blob/main/.vscode/settings.json
@@ -7,8 +7,8 @@
 
 {
   /*
-  * General
-  */
+   * General
+   */
   "files.associations": {
     "*.nswag": "json",
     "*.json": "jsonc",
@@ -27,10 +27,7 @@
     "*.lock": true,
     "dist/": true,
   },
-  "editor.rulers": [
-    80,
-    100,
-  ],
+  "editor.rulers": [80, 100],
   "editor.detectIndentation": false,
   "editor.tabSize": 2,
   "editor.insertSpaces": true,
@@ -53,22 +50,17 @@
   },
 
   /*
-  * Git
-  */
+   * Git
+   */
   "[git-commit]": {
-    "editor.rulers": [
-      72,
-    ],
+    "editor.rulers": [72],
   },
   "[diff]": {
     "files.trimTrailingWhitespace": false,
   },
   "git.openRepositoryInParentFolders": "always",
   // In case the dev never ran `git config blame.ignoreRevsFile .git-blame-ignore-revs`
-  "gitlens.advanced.blame.customArguments": [
-    "--ignore-revs-file",
-    ".git-blame-ignore-revs",
-  ],
+  "gitlens.advanced.blame.customArguments": ["--ignore-revs-file", ".git-blame-ignore-revs"],
 
   // NOTE: due to a bug in VSCode, we have to specify editor.defaultFormatter individually to ensure
   // it overrides user settings. Please upvote: https://github.com/microsoft/vscode/issues/168411
@@ -83,8 +75,8 @@
   "dotnet.formatting.organizeImportsOnFormat": true,
 
   /*
-  * Docker
-  */
+   * Docker
+   */
   "[dockerfile]": {
     "editor.defaultFormatter": "dprint.dprint",
     // dprint doesn't work with COPY JSON array syntax
@@ -94,16 +86,16 @@
   },
 
   /*
-  * Markdown
-  */
+   * Markdown
+   */
   "[markdown]": {
     "files.trimTrailingWhitespace": false,
     "editor.defaultFormatter": "dprint.dprint",
   },
 
   /*
-  * JSON
-  */
+   * JSON
+   */
   "[json]": {
     "editor.defaultFormatter": "dprint.dprint",
   },
@@ -113,14 +105,12 @@
   "json.schemas": [{
     // Not all .jsonc files have a pre-associated schema
     "fileMatch": ["*.jsonc"],
-    "schema": {
-      "allowTrailingCommas": true,
-    },
+    "schema": { "allowTrailingCommas": true },
   }],
 
   /*
-  * JS/TS
-  */
+   * JS/TS
+   */
   "[javascript]": {
     "editor.defaultFormatter": "dprint.dprint",
   },
@@ -171,8 +161,8 @@
   "jest.autoRun": "off",
 
   /*
-  * HTML
-  */
+   * HTML
+   */
   "[html]": {
     "editor.defaultFormatter": "dprint.dprint",
     // prettier and dprint's markup_fmt are likely to fail on Django Templates
@@ -184,8 +174,8 @@
   // "html.format.extraLiners": "",
 
   /*
-  * CSS
-  */
+   * CSS
+   */
   "[css]": {
     "editor.defaultFormatter": "dprint.dprint",
   },
@@ -200,8 +190,8 @@
   },
 
   /*
-  * Python
-  */
+   * Python
+   */
   "[python]": {
     "editor.defaultFormatter": "charliermarsh.ruff",
     "editor.tabSize": 4,
@@ -233,8 +223,8 @@
   // ],
 
   /*
-  * TOML
-  */
+   * TOML
+   */
   "[toml]": {
     "editor.defaultFormatter": "tamasfe.even-better-toml",
   },
@@ -257,8 +247,8 @@
   "evenBetterToml.formatter.reorderKeys": false,
 
   /*
-  * YAML
-  */
+   * YAML
+   */
   "[yaml]": {
     "editor.defaultFormatter": "dprint.dprint",
   },
@@ -273,16 +263,16 @@
   },
 
   /*
-  * XML
-  */
+   * XML
+   */
   "[xml]": {
     "editor.defaultFormatter": "dprint.dprint",
   },
   "xml.codeLens.enabled": true,
 
   /*
-  * Powershell
-  */
+   * Powershell
+   */
   "powershell.codeFormatting.pipelineIndentationStyle": "IncreaseIndentationForFirstPipeline",
   "powershell.codeFormatting.autoCorrectAliases": true,
   "powershell.codeFormatting.trimWhitespaceAroundPipe": true,
