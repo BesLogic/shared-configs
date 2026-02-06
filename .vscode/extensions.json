@@ -60,6 +60,8 @@
     "redhat.vscode-xml",
     // YAML
     "redhat.vscode-yaml",
+    // Power BI
+    "analysis-services.tmdl"
     //
     // Add your project's framework-specific and project-specific extensions under here
   ],
