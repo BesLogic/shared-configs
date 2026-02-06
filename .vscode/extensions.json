@@ -39,6 +39,9 @@
     "angular.ng-template",
     "johnpapa.angular2",
     "webben.browserslist",
+    //React-native / expo
+    "msjsdiag.vscode-react-native",
+    "expo.vscode-expo-tools",
     // Python/TOML
     "charliermarsh.ruff",
     "ms-python.mypy-type-checker",
@@ -60,12 +63,7 @@
     "redhat.vscode-xml",
     // YAML
     "redhat.vscode-yaml",
-    //
     // Add your project's framework-specific and project-specific extensions under here
-    //React-native
-    "msjsdiag.vscode-react-native",
-    //Expo
-    "expo.vscode-expo-tools"
   ],
   // List of extensions recommended by VS Code that should not be recommended for users of this workspace.
   // Developpers should uninstall or disable the following extensions for this workspace
