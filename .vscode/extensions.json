@@ -60,10 +60,10 @@
     "redhat.vscode-xml",
     // YAML
     "redhat.vscode-yaml",
+    // Power BI
+    "analysis-services.tmdl"
     //
     // Add your project's framework-specific and project-specific extensions under here
-    //Tmdl
-    "analysis-services.TMDL"
   ],
   // List of extensions recommended by VS Code that should not be recommended for users of this workspace.
   // Developpers should uninstall or disable the following extensions for this workspace
