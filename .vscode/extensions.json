@@ -39,6 +39,9 @@
     "angular.ng-template",
     "johnpapa.angular2",
     "webben.browserslist",
+    //React-native / expo
+    "msjsdiag.vscode-react-native",
+    "expo.vscode-expo-tools",
     // Python/TOML
     "charliermarsh.ruff",
     "ms-python.mypy-type-checker",
