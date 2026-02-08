@@ -41,6 +41,8 @@
   "editor.formatOnSaveMode": "file",
   "editor.codeActionsOnSave": {
     "source.fixAll": "explicit",
+    // Clearing unreachable code when doing a quick temporary change is annoying
+    "source.fixAll.ts": "never",
     // "source.*Imports": https://github.com/microsoft/TypeScript/pull/50931#issuecomment-1416288712
     // Let dedicated imports tool deal with it
     "source.organizeImports": "never",
@@ -144,7 +146,7 @@
     },
   ],
   "eslint.codeActionsOnSave.rules": [
-    // Clearing imports, unused vars and comments because of commented code while testing is annoying
+    // Clearing imports, unused vars and comments when doing a quick temporary change is annoying
     "!unused-imports/no-unused-imports",
     "!sonarjs/unused-import",
     "!autofix/no-debugger",
