@@ -19,7 +19,7 @@ Modifications to this file that are not project-specific should also be done ups
     -->
     <RestorePackagesWithLockFile>true</RestorePackagesWithLockFile>
     <!-- Ensure we don't accidentally update or bypass the lock files (missing `locked-mode`) -->
-    <!-- lock files can still be regenerated with: dotnet restore --locked-mode=false -->
+    <!-- lock files can still be regenerated with: dotnet restore -p:RestoreLockedMode=false -->
     <RestoreLockedMode>true</RestoreLockedMode>
 
     <!-- NuGet Security Audit https://learn.microsoft.com/en-us/nuget/concepts/auditing-packages -->
