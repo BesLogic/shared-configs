@@ -60,6 +60,7 @@
   "[diff]": {
     "files.trimTrailingWhitespace": false,
   },
+  "search.useParentIgnoreFiles": true,
   "git.openRepositoryInParentFolders": "always",
   // In case the dev never ran `git config --global blame.ignoreRevsFile .git-blame-ignore-revs`
   "gitlens.advanced.blame.customArguments": ["--ignore-revs-file", ".git-blame-ignore-revs"],
