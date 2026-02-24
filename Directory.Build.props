@@ -33,6 +33,9 @@ Modifications to this file that are not project-specific should also be done ups
     <!-- Will be default in .NET 10 -->
     <NuGetAuditMode>all</NuGetAuditMode>
 
-    <!-- Properties specific to this project below -->
+  </PropertyGroup>
+
+  <!-- Properties specific to this project below -->
+	<PropertyGroup>
   </PropertyGroup>
 </Project>
