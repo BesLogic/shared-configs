@@ -32,7 +32,6 @@ Modifications to this file that are not project-specific should also be done ups
     <WarningsAsErrors>$(WarningsAsErrors);NU1903;NU1904</WarningsAsErrors>
     <!-- Will be default in .NET 10 -->
     <NuGetAuditMode>all</NuGetAuditMode>
-
   </PropertyGroup>
 
   <!-- Properties specific to this project below -->
