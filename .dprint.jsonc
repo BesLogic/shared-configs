@@ -59,6 +59,7 @@
       ".prettierrc.json5",
       "jsconfig.json",
       "pyrightconfig.json",
+      "tsconfig.app.json",
       "tsconfig.base.json",
       "tsconfig.editor.json",
       "tsconfig.json",
