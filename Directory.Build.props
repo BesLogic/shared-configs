@@ -1,13 +1,12 @@
-<!--
-SPDX-License-Identifier: MIT
-Copyright 2026 Beslogic Inc.
-
-The source skeleton for this configuration can be found at
-https://github.com/BesLogic/shared-configs/blob/main/Directory.Build.props
-Modifications to this file that are not project-specific should also be done upstream.
--->
-
 <Project>
+  <!--
+  SPDX-License-Identifier: MIT
+  Copyright 2026 Beslogic Inc.
+
+  The source skeleton for this configuration can be found at
+  https://github.com/BesLogic/shared-configs/blob/main/Directory.Build.props
+  Modifications to this file that are not project-specific should also be done upstream.
+  -->
   <PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>
     <LangVersion>latest</LangVersion>
@@ -35,6 +34,7 @@ Modifications to this file that are not project-specific should also be done ups
   </PropertyGroup>
 
   <!-- Properties specific to this project below -->
+
 	<PropertyGroup>
   </PropertyGroup>
 </Project>
