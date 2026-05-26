@@ -20,9 +20,18 @@
       },
     },
     {
-      // Known json w/o trailing comma support
-      "files": ["*.code-workspace"],
+      // Most json files nowadays will support trailing commas and comments
+      "files": ["*.json"],
       "options": {
+        "parser": "jsonc",
+        "quoteProps": "preserve",
+      },
+    },
+    {
+      // Known json w/o trailing comma or comments support
+      "files": ["package.json", "*.code-workspace"],
+      "options": {
+        "parser": "json",
         "trailingComma": "none",
       },
     },
