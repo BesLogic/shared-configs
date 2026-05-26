@@ -49,6 +49,7 @@ quote_type = double
 indent_size = 4
 
 [*.csproj]
+# Visual Studio will always save this file with 4 spaces
 indent_size = 4
 
 #### .NET source code analysis ####
