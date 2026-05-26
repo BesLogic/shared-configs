@@ -12,6 +12,7 @@
   "files.associations": {
     "*.nswag": "json",
     "*.json": "jsonc",
+    "*.json5": "jsonc", // No good json5 language server. Ok for simple uses
     "package.json": "json",
     // Qt Creator
     "*.qrc": "xml",
@@ -107,7 +108,7 @@
   },
   "json.schemas": [{
     // Not all .jsonc files have a pre-associated schema
-    "fileMatch": ["*.jsonc"],
+    "fileMatch": ["*.jsonc", "*.json5"],
     "schema": { "allowTrailingCommas": true },
   }],
 
@@ -126,14 +127,12 @@
   "[typescriptreact]": {
     "editor.defaultFormatter": "dprint.dprint",
   },
-  "typescript.tsdk": "node_modules/typescript/lib",
-  "typescript.enablePromptUseWorkspaceTsdk": true,
-  "typescript.preferences.preferTypeOnlyAutoImports": true,
+  "js/ts.tsdk.path": "node_modules/typescript/lib",
+  "js/ts.tsdk.promptToUseWorkspaceVersion": true,
+  "js/ts.preferences.preferTypeOnlyAutoImports": true,
   "js/ts.implicitProjectConfig.checkJs": true,
-  "javascript.preferences.quoteStyle": "single",
-  "typescript.preferences.quoteStyle": "single",
-  "javascript.preferences.importModuleSpecifier": "non-relative",
-  "typescript.preferences.importModuleSpecifier": "non-relative",
+  "js/ts.preferences.quoteStyle": "single",
+  "js/ts.preferences.importModuleSpecifier": "non-relative",
   "eslint.validate": [
     // "html", // For Angular
     "javascript",
