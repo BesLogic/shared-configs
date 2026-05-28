@@ -48,10 +48,6 @@ quote_type = single
 quote_type = double
 indent_size = 4
 
-[*.csproj]
-# Visual Studio will always save this file with 4 spaces
-indent_size = 4
-
 #### .NET source code analysis ####
 #### https://learn.microsoft.com/en-us/dotnet/fundamentals/code-analysis/categories
 # Note that Visual Studio automatically adds back *:severity. So we left them there to avoid unwanted changes.
