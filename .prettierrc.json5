@@ -9,7 +9,7 @@
 // here's the configs that most match our recommendations.
 
 {
-  "semi": true,
+  "semi": false,
   "singleQuote": true,
   "experimentalOperatorPosition": "start",
   "overrides": [
