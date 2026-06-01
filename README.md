@@ -1,3 +1,5 @@
+<div align="right">(tip: table of content button here ↗️)</div>
+
 # Beslogic shared configurations
 
 These are the base configurations shared across different Beslogic projects.
