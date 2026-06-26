@@ -20,6 +20,14 @@
       },
     },
     {
+      // Override editorconfig's `max_line_length = off` for markdown, which sets
+      // printWidth to Infinity and collapses embedded code blocks onto one line.
+      "files": ["*.md"],
+      "options": {
+        "printWidth": 100,
+      },
+    },
+    {
       // Most json files nowadays will support trailing commas and comments
       "files": ["*.json"],
       "options": {
