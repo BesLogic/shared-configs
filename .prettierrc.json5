@@ -29,7 +29,7 @@
     },
     {
       // Known json w/o trailing comma or comments support
-      "files": ["package.json", "*.code-workspace"],
+      "files": ["package.json", "*.code-workspace", "eslint-suppressions.json"],
       "options": {
         "parser": "json",
         "trailingComma": "none",
