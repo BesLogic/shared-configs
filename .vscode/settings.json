@@ -197,10 +197,7 @@
   "[python]": {
     "editor.defaultFormatter": "charliermarsh.ruff",
     "editor.tabSize": 4,
-    "editor.rulers": [
-      72, // PEP8-17 docstrings
-      100, // Our formatting limit
-    ],
+    // "editor.rulers" // PEP8-17 says 72 for docstrings, but keeping our global 80
   },
   "mypy-type-checker.importStrategy": "fromEnvironment",
   "python.terminal.activateEnvironment": true,
