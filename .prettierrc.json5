@@ -32,12 +32,12 @@
       "files": ["*.json"],
       "options": {
         "parser": "jsonc",
-        "quoteProps": "preserve",
+        "trailingComma": "all",
       },
     },
     {
       // Known json w/o trailing comma or comments support
-      "files": ["package.json", "*.code-workspace", "eslint-suppressions.json"],
+      "files": ["package.json", "*.code-workspace", "eslint-suppressions.json", ".mcp.json"],
       "options": {
         "parser": "json",
         "trailingComma": "none",
