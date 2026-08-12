@@ -121,7 +121,7 @@
     "https://plugins.dprint.dev/g-plane/pretty_yaml-v0.5.0.wasm",
     "https://plugins.dprint.dev/dockerfile-0.4.1.wasm",
     "https://plugins.dprint.dev/g-plane/malva-v0.16.0.wasm",
-    "https://plugins.dprint.dev/g-plane/markup_fmt-v0.21.0.wasm",
+    "https://plugins.dprint.dev/g-plane/markup_fmt-v0.27.3.wasm",
   ],
   "excludes": [
     // dprint already exlcudes files in .gitignore, no need to add common ones here
