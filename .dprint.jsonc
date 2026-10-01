@@ -47,27 +47,17 @@
     ],
     // Request to allow globbing: https://github.com/dprint/dprint-plugin-json/issues/38
     "jsonTrailingCommaFiles": [
-      ".vscode/extensions.json",
-      ".vscode/launch.json",
-      ".vscode/settings.json",
-      ".vscode/tasks.json",
+      ".vscode/*.json",
       "dprint.json",
       "dprint-json-like.json",
       ".prettierrc.json5",
-      "jsconfig.json",
+      "[jt]sconfig.json",
+      "[jt]sconfig.*.json",
       "pyrightconfig.json",
-      "tsconfig.app.json",
-      "tsconfig.base.json",
-      "tsconfig.editor.json",
-      "tsconfig.json",
-      "tsconfig.lib.json",
-      "tsconfig.prod.json",
-      "tsconfig.lib.prod.json",
-      "tsconfig.spec.json",
       "typedoc.json",
       // "launchsettings.json", // not supported until .NET 9 https://github.com/dotnet/sdk/issues/35558
-      // "appsettings.json", // For consistency, don't include until globbing is possible here
-      // "appsettings.*.json",
+      "appsettings.json",
+      "appsettings.*.json",
       // nswag files generated with the client automatically removes trailing commas
     ],
   },
@@ -112,7 +102,7 @@
   },
   "plugins": [
     "https://plugins.dprint.dev/typescript-0.93.0.wasm",
-    "https://plugins.dprint.dev/json-0.19.3.wasm",
+    "https://plugins.dprint.dev/json-0.25.0.wasm",
     "https://plugins.dprint.dev/markdown-0.17.8.wasm",
     "https://plugins.dprint.dev/toml-0.6.3.wasm",
     "https://plugins.dprint.dev/g-plane/pretty_yaml-v0.5.0.wasm",
