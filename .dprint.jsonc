@@ -37,6 +37,9 @@
   },
   // https://dprint.dev/plugins/json/config/
   "json": {
+    // TODO: Can't even consider until comments stop being sorted
+    // https://github.com/dprint/dprint-plugin-json/issues/72
+    "packageJson.applyConventions": false,
     "associations": [
       "*.json",
       "*.jsonc",
