@@ -64,6 +64,12 @@
       // nswag files generated with the client automatically removes trailing commas
     ],
   },
+  "markdown": {
+    // Assume markdown files will always be line-wrapped by viewer. Even in IDEs
+    "textWrap": "never",
+    // Small tables are nice, wide tables become unwieldy. Also saves on characters.
+    "table.cellPadding": "space",
+  },
   "yaml": {
     "printWidth": 100,
     "ignoreCommentDirective": "dprint-ignore",
