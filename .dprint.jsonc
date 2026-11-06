@@ -98,7 +98,7 @@
     "formatComments": true,
     "scriptIndent": true,
     "styleIndent": true,
-    // TODO: Ask for a "selfClosing" shorthand
+    // Note: No plan for a "selfClosing" shorthand. https://github.com/g-plane/markup_fmt/issues/249
     "component.selfClosing": true,
     "svg.selfClosing": true,
     "mathml.selfClosing": true,
