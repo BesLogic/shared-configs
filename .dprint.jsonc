@@ -18,6 +18,10 @@
     "typeLiteral.separatorKind": "comma",
     "enumDeclaration.memberSpacing": "newLine",
     "importDeclaration.forceSingleLine": true,
+    "decorators.position": "nextLine",
+    "conditionalExpression.indentBranchContent": true,
+    "conditionalExpression.useNestedIndentation": true,
+    "conditionalType.useNestedIndentation": true,
     // Prevent unecessary wrapping on arrow-function assigned to props
     // Also prevents adding parens inside ternaries and increasing indent
     // https://github.com/dprint/dprint-plugin-typescript/issues/760
@@ -28,12 +32,19 @@
     // TODO: Consider this ! At least for string concatenation (test in DRL)
     // "binaryExpression.linePerExpression": true,
 
+    // TODO: Try this out, I can't visualize with just the description
+    // "jsxExpressionContainer.preferSingleLine": true,
+
     // Not convinced yet
     // "memberExpression.linePerExpression": true,
 
     // conflict with simple-import-sort/imports
     "module.sortImportDeclarations": "maintain",
     "module.sortExportDeclarations": "maintain",
+    // IDEM. Though these are defaults, but wanna investigate if we could use
+    "module.importGroups": [],
+    "exportDeclaration.sortTypeOnlyExports": "inline",
+    "importDeclaration.sortTypeOnlyImports": "inline",
   },
   // https://dprint.dev/plugins/json/config/
   "json": {
