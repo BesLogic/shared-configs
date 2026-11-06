@@ -19,18 +19,22 @@
     "enumDeclaration.memberSpacing": "newLine",
     "importDeclaration.forceSingleLine": true,
     "decorators.position": "nextLine",
+
+    // Visually clarify nested statements and blocks
     "conditionalExpression.indentBranchContent": true,
     "conditionalExpression.useNestedIndentation": true,
     "conditionalType.useNestedIndentation": true,
+
+    // Same as import-x/newline-after-import's "exactCount": true
+    "module.blankLinesAfterImports": 1,
+
     // Prevent unecessary wrapping on arrow-function assigned to props
     // Also prevents adding parens inside ternaries and increasing indent
     // https://github.com/dprint/dprint-plugin-typescript/issues/760
     "jsx.multiLineParens": "never",
+
     // One of the rare case where unconditional unwraping is what we want
     "jsxAttributes.preferSingleLine": true,
-
-    // TODO: Consider this ! At least for string concatenation (test in DRL)
-    // "binaryExpression.linePerExpression": true,
 
     // TODO: Try this out, I can't visualize with just the description
     // "jsxExpressionContainer.preferSingleLine": true,
@@ -59,7 +63,6 @@
       "*.dmw",
       // Not including Power BI files as we're not expecting manual edits in those
     ],
-    // Request to allow globbing: https://github.com/dprint/dprint-plugin-json/issues/38
     "jsonTrailingCommaFiles": [
       ".vscode/*.json",
       "dprint.json",
