@@ -24,7 +24,12 @@ Add the following into your `.dprint.jsonc` at the root of your git project (eve
 ```jsonc
 {
   // https://dprint.dev/config/#extending-a-different-configuration-file
-  "extends": "https://raw.githubusercontent.com/BesLogic/shared-configs/<hash>/.dprint.jsonc"
+  "extends": "https://raw.githubusercontent.com/BesLogic/shared-configs/<hash>/.dprint.jsonc",
+  "markup": {
+    // Configure this if you use a language superset, like Angular or Jinja templates
+    // https://markup-fmt.netlify.app/config/extensions.html
+    // extensions: { "html": "" },
+  },
 }
 ```
 
