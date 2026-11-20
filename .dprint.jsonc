@@ -33,7 +33,7 @@
     // https://github.com/dprint/dprint-plugin-typescript/issues/760
     "jsx.multiLineParens": "never",
 
-    // One of the rare case where unconditional unwraping is what we want
+    // One of the rare case where unconditional unwrapping is what we want
     "jsxAttributes.preferSingleLine": true,
 
     // TODO: Try this out, I can't visualize with just the description
@@ -124,17 +124,18 @@
     "ignoreCommentDirective": "dprint-ignore",
   },
   "plugins": [
-    "https://plugins.dprint.dev/typescript-0.98.0.wasm",
-    "https://plugins.dprint.dev/json-0.25.1.wasm",
-    "https://plugins.dprint.dev/markdown-0.27.1.wasm",
-    "https://plugins.dprint.dev/toml-0.6.3.wasm",
-    "https://plugins.dprint.dev/g-plane/pretty_yaml-v0.5.0.wasm",
-    "https://plugins.dprint.dev/dockerfile-0.4.1.wasm",
-    "https://plugins.dprint.dev/g-plane/malva-v0.16.0.wasm",
-    "https://plugins.dprint.dev/g-plane/markup_fmt-v0.28.0.wasm",
+    "npm:@dprint/typescript@0.98.0",
+    "npm:@dprint/json@0.25.1",
+    "npm:@dprint/markdown@0.27.1",
+    "npm:@dprint/toml@0.6.3",
+    "npm:@dprint/dockerfile@0.4.1",
+    "npm:@dprint/roslyn@0.24.1",
+    "npm:dprint-plugin-yaml@0.5.0",
+    "npm:dprint-plugin-malva@0.16.0",
+    "npm:dprint-plugin-markup@0.28.0",
   ],
   "excludes": [
-    // dprint already exlcudes files in .gitignore, no need to add common ones here
+    // dprint already excludes files in .gitignore, no need to add common ones here
     // https://dprint.dev/config/#un-excluding-gitignored-files
     "**/node_modules",
     "**/storybook-static",
