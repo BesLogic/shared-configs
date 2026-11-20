@@ -129,7 +129,9 @@
     "npm:@dprint/markdown@0.27.1",
     "npm:@dprint/toml@0.6.3",
     "npm:@dprint/dockerfile@0.4.1",
-    "npm:@dprint/roslyn@0.22.1/plugin.json@e194b696e1ac5b28598258c8ffa6c5b11d6b6a86467289805ba003ec61103c32",
+    // Non-wasm plugins are ignored in remote configs, so it can't come from "extends".
+    // Last non-wasm version: wasm versions (>=0.23) need dprint>=0.61.0
+    // "npm:@dprint/roslyn@0.23.0",
     "npm:dprint-plugin-yaml@0.5.0",
     "npm:dprint-plugin-malva@0.16.0",
     "npm:dprint-plugin-markup@0.28.0",
